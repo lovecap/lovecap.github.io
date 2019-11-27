@@ -229,6 +229,143 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/27/leetcode第3题/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="敦盛">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="自娱自乐，记录生活">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/11/27/leetcode第3题/" itemprop="url">leetcode第3题</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-27T09:21:07+08:00">
+                2019-11-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="leetcode第3题"><a href="#leetcode第3题" class="headerlink" title="leetcode第3题"></a>leetcode第3题</h1><h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p> 给定一个字符串，请你找出其中不含有重复字符的 <strong>最长子串</strong> 的长度。 </p>
+<h1 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h1><p>示例1</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: &quot;abcabcbb&quot;</span><br><span class="line">输出: 3 </span><br><span class="line">解释: 因为无重复字符的最长子串是 &quot;abc&quot;，所以其长度为 3。</span><br></pre></td></tr></table></figure>
+<p>示例2</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: &quot;bbbbb&quot;</span><br><span class="line">输出: 1</span><br><span class="line">解释: 因为无重复字符的最长子串是 &quot;b&quot;，所以其长度为 1。</span><br></pre></td></tr></table></figure>
+<p>示例3<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入: &quot;pwwkew&quot;</span><br><span class="line">输出: 3</span><br><span class="line">解释: 因为无重复字符的最长子串是 &quot;wke&quot;，所以其长度为 3。</span><br><span class="line">     请注意，你的答案必须是子串的长度，&quot;pwke&quot; 是一个子序列，不是子串。</span><br></pre></td></tr></table></figure></p>
+<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>一开始做，就只想到双重循环，对每一个点进行一次判断，每个点有几个不重复的字符串。最后给出最大的结果。</p>
+<p>结果就是效率好低啊，给出我的解法1。</p>
+<p>然后我就去找了提交记录里面最快的一个方法学习了一下。</p>
+<p>他的特点在于只用了一次循环，就解决了这个问题，大大地提高了运行效率，解法贴在解法2里面。</p>
+<p>关键点在于利用字符串的特性，每次找到重复字符后，从保存的重复字符串中抽取字符，组成新的结果，重新进行比较。</p>
+<p>我试着改一改我的解法1。</p>
+<p>效率快了很多，但还是没有解法2效率高，我认为差距在于我的列表操作时间比不上字符串操作，low了一点，但也把解法3贴出来吧。</p>
+<h1 id="解法1"><a href="#解法1" class="headerlink" title="解法1"></a>解法1</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">lengthOfLongestSubstring</span><span class="params">(self, s: str)</span> -&gt; int:</span></span><br><span class="line">        d=[]</span><br><span class="line">        maxcount=<span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(s)):</span><br><span class="line">            count=<span class="number">1</span></span><br><span class="line">            d=[]</span><br><span class="line">            d.append(s[i])</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> range(i+<span class="number">1</span>,len(s)):</span><br><span class="line">                <span class="keyword">if</span> s[j] <span class="keyword">in</span> d:</span><br><span class="line">                    <span class="keyword">break</span></span><br><span class="line">                count=count+<span class="number">1</span></span><br><span class="line">                d.append(s[j])</span><br><span class="line">            <span class="keyword">if</span> count&gt;maxcount:</span><br><span class="line">                maxcount=count</span><br><span class="line">        <span class="keyword">return</span> maxcount</span><br></pre></td></tr></table></figure>
+<h1 id="解法2"><a href="#解法2" class="headerlink" title="解法2"></a>解法2</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">lengthOfLongestSubstring</span><span class="params">(self, s: str)</span> -&gt; int:</span></span><br><span class="line">        <span class="keyword">if</span> s:</span><br><span class="line">            res=<span class="string">''</span></span><br><span class="line">            slen=<span class="number">0</span></span><br><span class="line">            <span class="keyword">for</span> meb <span class="keyword">in</span> s:</span><br><span class="line">                <span class="keyword">if</span> meb <span class="keyword">not</span> <span class="keyword">in</span> res:</span><br><span class="line">                    res+=meb</span><br><span class="line">                    <span class="keyword">if</span> len(res)&gt;slen:</span><br><span class="line">                        slen=len(res)</span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    i=res.find(meb)</span><br><span class="line">                    res=res[i+<span class="number">1</span>:]+meb</span><br><span class="line">            <span class="keyword">return</span> slen</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br></pre></td></tr></table></figure>
+<h1 id="解法3"><a href="#解法3" class="headerlink" title="解法3"></a>解法3</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">lengthOfLongestSubstring</span><span class="params">(self, s: str)</span> -&gt; int:</span></span><br><span class="line">        d=[]</span><br><span class="line">        maxcount=<span class="number">0</span></span><br><span class="line">        <span class="keyword">if</span> s:</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> s:</span><br><span class="line">                <span class="keyword">if</span> i <span class="keyword">not</span> <span class="keyword">in</span> d:</span><br><span class="line">                    d.append(i)</span><br><span class="line">                    <span class="keyword">if</span> maxcount&lt;len(d):</span><br><span class="line">                        maxcount=len(d)</span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    index=d.index(i)</span><br><span class="line">                    d=d[index+<span class="number">1</span>:]</span><br><span class="line">                    d.append(i)</span><br><span class="line">            <span class="keyword">return</span> maxcount</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br></pre></td></tr></table></figure>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>学到了思路，对于重复字符比较问题，可以把重复字符暂存起来。</p>
+<p>不需要两次循环，只需要在重复的时候，把暂存的字符串更新一下，能给下次使用就可以了。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/26/leetcode第2题/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -935,7 +1072,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
