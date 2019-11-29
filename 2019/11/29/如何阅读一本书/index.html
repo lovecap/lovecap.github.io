@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="leetcode,">
+  <meta name="keywords" content="阅读记录,">
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="leetcode第1题">
-<meta name="keywords" content="leetcode">
+<meta name="description" content="引言这是我在《如何阅读一本书》中得来的一点点收获，记录在这里。 告诉我以后在阅读的时候如何去做。">
+<meta name="keywords" content="阅读记录">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode第1题">
-<meta property="og:url" content="http://yoursite.com/2019/11/25/leetcode第1题/index.html">
+<meta property="og:title" content="如何阅读一本书">
+<meta property="og:url" content="http://yoursite.com/2019/11/29/如何阅读一本书/index.html">
 <meta property="og:site_name" content="自娱自乐，记录生活">
-<meta property="og:description" content="leetcode第1题">
+<meta property="og:description" content="引言这是我在《如何阅读一本书》中得来的一点点收获，记录在这里。 告诉我以后在阅读的时候如何去做。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-11-27T03:00:36.895Z">
+<meta property="og:updated_time" content="2019-11-29T11:24:00.795Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="leetcode第1题">
-<meta name="twitter:description" content="leetcode第1题">
+<meta name="twitter:title" content="如何阅读一本书">
+<meta name="twitter:description" content="引言这是我在《如何阅读一本书》中得来的一点点收获，记录在这里。 告诉我以后在阅读的时候如何去做。">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/11/25/leetcode第1题/">
+  <link rel="canonical" href="http://yoursite.com/2019/11/29/如何阅读一本书/">
 
 
 
 
 
-  <title>leetcode第1题 | 自娱自乐，记录生活</title>
+  <title>如何阅读一本书 | 自娱自乐，记录生活</title>
   
 
 
@@ -275,7 +275,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/25/leetcode第1题/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/29/如何阅读一本书/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="敦盛">
@@ -292,7 +292,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">leetcode第1题</h1>
+          <h1 class="post-title" itemprop="name headline">如何阅读一本书</h1>
         
 
         <div class="post-meta">
@@ -304,8 +304,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-25T15:03:45+08:00">
-                2019-11-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-29T19:13:43+08:00">
+                2019-11-29
               </time>
             
 
@@ -342,24 +342,31 @@
       
 
       
-        <h1 id="leetcode第1题"><a href="#leetcode第1题" class="headerlink" title="leetcode第1题"></a>leetcode第1题</h1> <a id="more"></a> 
-<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。</p>
-<p>你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素。</p>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><p>给定 nums = [2, 7, 11, 15], target = 9</p>
-<p>因为 nums[0] + nums[1] = 2 + 7 = 9<br>所以返回 [0, 1]</p>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>很早就写过这道题，就一直有印象，就和单词书的abandon一样，始终是第一页的第一个单词，从开始到放弃，一直在这个地方徘徊。</p>
-<p>题目也很简单，最简单的做法就是双重循环暴力破解，但是时间复杂度为O(n^2),结果就是超时了，不太行。</p>
-<p>所以要用更加高级的做法，用空间换时间，引出了哈希的概念。</p>
-<p>把用过的数据放在hash中，因为查询哈希只需要O(1)的时间,再加一次循环，解答本题的时间复杂度为O(n)，问题就解决了。</p>
-<p>在python里面，哈希就是字典，更加简单容易。</p>
-<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>在进行的时候，忘记了python遍历索引和值，卡了好一会，在网上搜索到了enumerate函数，解决了这个问题。</p>
-<p>我又试着不用enumerate来解决这个问题。</p>
-<p>下面给出了我的两个解法。</p>
-<h2 id="解法1"><a href="#解法1" class="headerlink" title="解法1"></a>解法1</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">twoSum</span><span class="params">(self, nums: List[int], target: int)</span> -&gt; List[int]:</span></span><br><span class="line">        d=&#123;&#125;</span><br><span class="line">        <span class="keyword">for</span> k, v <span class="keyword">in</span> enumerate(nums):</span><br><span class="line">            <span class="keyword">if</span> target-v <span class="keyword">in</span> d:</span><br><span class="line">                <span class="keyword">return</span> d[target-v],k</span><br><span class="line">            d[v]=k</span><br></pre></td></tr></table></figure>
-<h2 id="解法2"><a href="#解法2" class="headerlink" title="解法2"></a>解法2</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">twoSum</span><span class="params">(self, nums: List[int], target: int)</span> -&gt; List[int]:</span></span><br><span class="line">        d=&#123;&#125;</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(nums)):</span><br><span class="line">            <span class="keyword">if</span> target-nums[i] <span class="keyword">in</span> d:</span><br><span class="line">                <span class="keyword">return</span> d[target-nums[i]],i</span><br><span class="line">            d[nums[i]]=i</span><br></pre></td></tr></table></figure>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>就时间上来讲，enumerate的做法比我快很多，不知道差距在哪里？</p>
-<p>猜测应该是实现方式的差距，我调用了range，它的效率可能不高。</p>
-<p>这个问题留给以后解决吧！</p>
+        <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>这是我在《如何阅读一本书》中得来的一点点收获，记录在这里。</p>
+<p>告诉我以后在阅读的时候如何去做。</p>
+ <a id="more"></a> 
+<h1 id="四个问题"><a href="#四个问题" class="headerlink" title="四个问题"></a>四个问题</h1><p>（1） 整 体 来 说， 这 本 书 到 底 在 谈 些 什 么？ 你 一 定 要 想 办 法 找 出 这 本 书 的 主 题， 作 者 如 何 依 次 发 展 这 个 主 题， 如 何 逐 步 从 核 心 主 题 分 解 出从 属 的 关 键 议 题 来。 </p>
+<p>（2） 作 者 细 部 说 了 什 么， 怎 么 说 的？ 你 一 定 要 想 办 法 找 出 主 要 的 想 法、 声 明 与 论 点。 这 些 组 合 成 作 者 想 要 传 达 的 特 殊 讯 息。 </p>
+<p>（3） 这 本 书 说 得 有 道 理 吗？ 是 全 部 有 道 理， 还 是 部 分 有 道 理？ 除 非 你 能 回 答 前 两 个 问 题， 否 则 你 没 法 回 答 这 个 问 题。 在 你 判 断 这 本 书 是 否 有 道 理 之 前， 你 必 须 先 了 解 整 本 书 在 说 些 什 么 才 行。 然 而， 等 你 了 解 了 一 本 书， 如 果 你 又 读 得 很 认 真 的 话， 你 会 觉 得 有 责 任 为 这 本 书 做 个 自 己 的 判 断。 光 是 知 道 作 者 的 想 法 是 不 够 的。</p>
+<p>（4） 这 本 书 跟 你 有 什 么 关 系？ 如 果 这 本 书 给 了 你 一 些 资 讯， 你 一 定 要 问 问 这 些 资 讯 有 什 么 意 义。 为 什 么 这 位 作 者 会 认 为 知 道 这 件 事 很 重 要？ 你 真 的 有 必 要 去 了 解 吗？ 如 果 这 本 书 不 只 提 供 了 资 讯， 还 启 发 了 你， 就 更 有 必 要 找 出 其 他 相 关 的、 更 深 的 含 意 或 建 议， 以 获 得 更 多 的 启 示。</p>
+<h1 id="分析阅读的几点规则"><a href="#分析阅读的几点规则" class="headerlink" title="分析阅读的几点规则"></a>分析阅读的几点规则</h1><p>（1） 依 照 书 的 种 类 与 主 题 来 分 类。 </p>
+<p>（2） 使 用 最 简 短 的 文 字 说 明 整 本 书 在 谈 些 什 么。</p>
+<p>（3） 将 主 要 部 分 按 顺 序 与 关 联 性 列 举 出 来。 将 全 书 的 大 纲 列 举 出 来， 并 将 各 个 部 分 的 大 纲 也 列 出 来。 </p>
+<p>（4） 确 定 作 者 想 要 解 决 的 问 题。</p>
+<p>（5） 诠 释 作 者 的 关 键 字， 与 他 达 成 共 识。 </p>
+<p>（6） 由 最 重 要 的 句 子 中， 抓 住 作 者 的 重 要 主 旨。 </p>
+<p>（7） 知 道 作 者 的 论 述 是 什 么， 从 内 容 中 找 出 相 关 的 句 子， 再 重 新 架 构 出 来。 </p>
+<p>（8） 确 定 作 者 已 经 解 决 了 哪 些 问 题， 还 有 哪 些 是 没 解 决 的。 再 判 断 哪 些 是 作 者 知 道 他 没 解 决 的 问 题。</p>
+<p>（9） 除 非 你 已 经 完 成 大 纲 架 构， 也 能 诠 释 整 本 书 了， 否 则 不 要 轻 易 批 评。（ 在 你 说 出：“ 我 读 懂 了!” 之 前， 不 要 说 你 同 意、 不 同 意 或 暂 缓 评 论。） </p>
+<p>（10） 不 要 争 强 好 胜， 非 辩 到 底 不 可。</p>
+<p>（11） 在 说 出 评 论 之 前， 你 要 能 证 明 自 己 区 别 得 出 真 正 的 知 识 与 个 人 观 点 的 不 同。</p>
+<p>（12） 证 明 作 者 的 知 识 不 足。 </p>
+<p>（13） 证 明 作 者 的 知 识 错 误。</p>
+<p>（14） 证 明 作 者 不 合 逻 辑。</p>
+<p>（15） 证 明 作 者 的 分 析 与 理 由 是 不 完 整 的。</p>
+<h1 id="主动地阅读"><a href="#主动地阅读" class="headerlink" title="主动地阅读"></a>主动地阅读</h1><p>在阅读的时候，不能是昏昏欲睡的，决不能变成那种，我看完了全文，但是我不知道它说了些什么。</p>
+<p>要能回答这四个问题，别人问的时候，要能说出自己最真切的体会。</p>
+<p>无论如何，要当一个主动的读者，不能当一个僵硬、死记硬背、读完就忘的读者。</p>
 
       
     </div>
@@ -377,7 +384,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/leetcode/" rel="tag"># leetcode</a>
+            <a href="/tags/阅读记录/" rel="tag"># 阅读记录</a>
           
         </div>
       
@@ -390,8 +397,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/11/25/新的开始/" rel="next" title="新的开始">
-                <i class="fa fa-chevron-left"></i> 新的开始
+              <a href="/2019/11/29/leetcode第5题/" rel="next" title="leetcode第5题">
+                <i class="fa fa-chevron-left"></i> leetcode第5题
               </a>
             
           </div>
@@ -399,10 +406,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/11/25/敦盛/" rel="prev" title="敦盛">
-                敦盛 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -525,7 +528,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#leetcode第1题"><span class="nav-number">1.</span> <span class="nav-text">leetcode第1题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#题目"><span class="nav-number">1.1.</span> <span class="nav-text">题目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#示例"><span class="nav-number">1.2.</span> <span class="nav-text">示例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#思路"><span class="nav-number">1.3.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题"><span class="nav-number">1.4.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解法1"><span class="nav-number">1.5.</span> <span class="nav-text">解法1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解法2"><span class="nav-number">1.6.</span> <span class="nav-text">解法2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">1.7.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#引言"><span class="nav-number">1.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四个问题"><span class="nav-number">2.</span> <span class="nav-text">四个问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分析阅读的几点规则"><span class="nav-number">3.</span> <span class="nav-text">分析阅读的几点规则</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#主动地阅读"><span class="nav-number">4.</span> <span class="nav-text">主动地阅读</span></a></li></ol></div>
             
 
           </div>
