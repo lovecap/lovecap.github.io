@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="leetcode第1题">
+<meta name="description" content="leetcode第6题">
 <meta name="keywords" content="leetcode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode第1题">
-<meta property="og:url" content="http://yoursite.com/2019/11/25/leetcode第1题/index.html">
+<meta property="og:title" content="leetcode第6题">
+<meta property="og:url" content="http://yoursite.com/2019/12/18/leetcode第6题/index.html">
 <meta property="og:site_name" content="自娱自乐，记录生活">
-<meta property="og:description" content="leetcode第1题">
+<meta property="og:description" content="leetcode第6题">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-11-27T03:00:36.895Z">
+<meta property="og:updated_time" content="2019-12-19T04:18:13.199Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="leetcode第1题">
-<meta name="twitter:description" content="leetcode第1题">
+<meta name="twitter:title" content="leetcode第6题">
+<meta name="twitter:description" content="leetcode第6题">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/11/25/leetcode第1题/">
+  <link rel="canonical" href="http://yoursite.com/2019/12/18/leetcode第6题/">
 
 
 
 
 
-  <title>leetcode第1题 | 自娱自乐，记录生活</title>
+  <title>leetcode第6题 | 自娱自乐，记录生活</title>
   
 
 
@@ -275,7 +275,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/25/leetcode第1题/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/18/leetcode第6题/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="敦盛">
@@ -292,7 +292,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">leetcode第1题</h1>
+          <h1 class="post-title" itemprop="name headline">leetcode第6题</h1>
         
 
         <div class="post-meta">
@@ -304,8 +304,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-25T15:03:45+08:00">
-                2019-11-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-18T21:48:18+08:00">
+                2019-12-18
               </time>
             
 
@@ -342,24 +342,46 @@
       
 
       
-        <h1 id="leetcode第1题"><a href="#leetcode第1题" class="headerlink" title="leetcode第1题"></a>leetcode第1题</h1> <a id="more"></a> 
-<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。</p>
-<p>你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素。</p>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><p>给定 nums = [2, 7, 11, 15], target = 9</p>
-<p>因为 nums[0] + nums[1] = 2 + 7 = 9<br>所以返回 [0, 1]</p>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>很早就写过这道题，就一直有印象，就和单词书的abandon一样，始终是第一页的第一个单词，从开始到放弃，一直在这个地方徘徊。</p>
-<p>题目也很简单，最简单的做法就是双重循环暴力破解，但是时间复杂度为O(n^2),结果就是超时了，不太行。</p>
-<p>所以要用更加高级的做法，用空间换时间，引出了哈希的概念。</p>
-<p>把用过的数据放在hash中，因为查询哈希只需要O(1)的时间,再加一次循环，解答本题的时间复杂度为O(n)，问题就解决了。</p>
-<p>在python里面，哈希就是字典，更加简单容易。</p>
-<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>在进行的时候，忘记了python遍历索引和值，卡了好一会，在网上搜索到了enumerate函数，解决了这个问题。</p>
-<p>我又试着不用enumerate来解决这个问题。</p>
-<p>下面给出了我的两个解法。</p>
-<h2 id="解法1"><a href="#解法1" class="headerlink" title="解法1"></a>解法1</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">twoSum</span><span class="params">(self, nums: List[int], target: int)</span> -&gt; List[int]:</span></span><br><span class="line">        d=&#123;&#125;</span><br><span class="line">        <span class="keyword">for</span> k, v <span class="keyword">in</span> enumerate(nums):</span><br><span class="line">            <span class="keyword">if</span> target-v <span class="keyword">in</span> d:</span><br><span class="line">                <span class="keyword">return</span> d[target-v],k</span><br><span class="line">            d[v]=k</span><br></pre></td></tr></table></figure>
-<h2 id="解法2"><a href="#解法2" class="headerlink" title="解法2"></a>解法2</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">twoSum</span><span class="params">(self, nums: List[int], target: int)</span> -&gt; List[int]:</span></span><br><span class="line">        d=&#123;&#125;</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(nums)):</span><br><span class="line">            <span class="keyword">if</span> target-nums[i] <span class="keyword">in</span> d:</span><br><span class="line">                <span class="keyword">return</span> d[target-nums[i]],i</span><br><span class="line">            d[nums[i]]=i</span><br></pre></td></tr></table></figure>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>就时间上来讲，enumerate的做法比我快很多，不知道差距在哪里？</p>
-<p>猜测应该是实现方式的差距，我调用了range，它的效率可能不高。</p>
-<p>这个问题留给以后解决吧！</p>
+        <h1 id="leetcode第6题"><a href="#leetcode第6题" class="headerlink" title="leetcode第6题"></a>leetcode第6题</h1> <a id="more"></a> 
+<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>将一个给定字符串根据给定的行数，以从上往下、从左到右进行 Z 字形排列。</p>
+<p>比如输入字符串为 “LEETCODEISHIRING” 行数为 3 时，排列如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">L   C   I   R</span><br><span class="line">E T O E S I I G</span><br><span class="line">E   D   H   N</span><br></pre></td></tr></table></figure></p>
+<p>之后，你的输出需要从左往右逐行读取，产生出一个新的字符串，比如：”LCIRETOESIIGEDHN”。</p>
+<p>请你实现这个将字符串进行指定行数变换的函数：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">string convert(string s, int numRows);</span><br></pre></td></tr></table></figure></p>
+<h1 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h1><p>示例1</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: s = &quot;LEETCODEISHIRING&quot;, numRows = 3</span><br><span class="line">输出: &quot;LCIRETOESIIGEDHN&quot;</span><br></pre></td></tr></table></figure>
+<p>示例2</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">输入: s = &quot;LEETCODEISHIRING&quot;, numRows = 4</span><br><span class="line">输出: &quot;LDREOEIIECIHNTSG&quot;</span><br><span class="line">解释:</span><br><span class="line"></span><br><span class="line">L     D     R</span><br><span class="line">E   O E   I I</span><br><span class="line">E C   I H   N</span><br><span class="line">T     S     G</span><br></pre></td></tr></table></figure>
+<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>我一点思路都没有，直接看的解法。</p>
+<p>看懂了就说一下。</p>
+<p>第一个解法是遍历字符，通过将字母放到对应行，最后将全部行拼接起来。</p>
+<p>那怎么实现呢？</p>
+<p>通过一个行进方向来控制具体在哪一行。</p>
+<p>如果是首行出发，就一直往下走；如果到达末尾行，就一直往上走。</p>
+<p>仔细看，会发现其实题解的状态跟另外一种状态是一样的。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">L     D     R</span><br><span class="line">E   O E   I I</span><br><span class="line">E C   I H   N</span><br><span class="line">T     S     G</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">L   D   R</span><br><span class="line">E O E I I</span><br><span class="line">E C I H N</span><br><span class="line">T   S   G</span><br></pre></td></tr></table></figure>
+<p>这两个其实是一样的，巧妙变换就没必要用二维数组解决了。</p>
+<p>具体看解法1。</p>
+<p>第二种解法就是找规律，找到对应位置的在第几行，然后每行一个列表拼接起来就好了。</p>
+<p>首先访问 行 0 中的所有字符，接着访问 行 1，然后 行 2，依此类推…</p>
+<p>分成两部分，<strong>首尾行</strong>及在<strong>Z字形上的行</strong>；</p>
+<p>分成两种类型数据，第一种是位于i行，间隔为numRows*2-2的数据；第二种是位于Z字形上的数据。</p>
+<p>第一种的表示方法为i+k*(numRows*2-2),意思就是第i行，加上间隔的位置，就是这一行的东西。</p>
+<p>第二种的表示方法为(k+1)*(numRows*2-2)-i，意思是先找到后面的固定行，往回减就是对应位置。</p>
+<p>首尾行只有第一种情况，另外的行则两部分都要考虑。</p>
+<p>以示例2第2行举个例子。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">输入: s = &quot;LEETCODEISHIRING&quot;, numRows = 4</span><br><span class="line">输出: &quot;LDREOEIIECIHNTSG&quot;</span><br><span class="line">解释:</span><br><span class="line"></span><br><span class="line">L     D     R</span><br><span class="line">E   O E   I I</span><br><span class="line">E C   I H   N</span><br><span class="line">T     S     G</span><br></pre></td></tr></table></figure>
+<p>这里的E、E、I分别位于（0,1,2）*(6)+1的索引上，对应第一种情况。</p>
+<p>这里的O、I分别位于5和11上，索引为（1,2）*(6)-1;</p>
+<p>具体的就可以看解法2。</p>
+<h1 id="解法1"><a href="#解法1" class="headerlink" title="解法1"></a>解法1</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def convert(self, s: str, numRows: int) -&gt; str:</span><br><span class="line">        if numRows &lt;= 1:</span><br><span class="line">            return s</span><br><span class="line">        zigzag = [&apos;&apos; for i in range(numRows)]</span><br><span class="line">        row = 0</span><br><span class="line">        step = 1</span><br><span class="line">        for c in s:</span><br><span class="line">            if row == 0:</span><br><span class="line">                step = 1</span><br><span class="line">            if row == numRows - 1:</span><br><span class="line">                step = -1</span><br><span class="line">            zigzag[row] += c</span><br><span class="line">            row += step</span><br><span class="line">        return &apos;&apos;.join((zigzag))</span><br></pre></td></tr></table></figure>
+<h1 id="解法2"><a href="#解法2" class="headerlink" title="解法2"></a>解法2</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def convert(self, s: str, numRows: int) -&gt; str:</span><br><span class="line">        lenS=len(s)</span><br><span class="line">        if numRows&lt;=1:</span><br><span class="line">            return s</span><br><span class="line">        cyclen=numRows*2-2</span><br><span class="line">        x=&apos;&apos;</span><br><span class="line">        for i in range(numRows):</span><br><span class="line">            for j in range(0,lenS,cyclen):</span><br><span class="line">                if j+i&gt;=lenS:</span><br><span class="line">                    break</span><br><span class="line">                x+=s[j+i]</span><br><span class="line">                if i!=0 and i!=(numRows-1) and (j+cyclen-i)&lt;lenS:</span><br><span class="line">                    x+=s[j+cyclen-i]</span><br><span class="line">        return x</span><br></pre></td></tr></table></figure>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>玩了好久，突然回来刷leetcode，一点感觉都没有。</p>
+<p>我选择了直接去看答案。</p>
+<p>直接抄了一份解法看。</p>
+<p>我想了想，第一遍的时候，不要有太多期望，能看懂就是很好的结果了。</p>
+<p>要记得及时总结和反馈，才是最关键的。</p>
+<p>当然最最关键的是，还是得坚持啊。</p>
 
       
     </div>
@@ -390,8 +412,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/11/25/新的开始/" rel="next" title="新的开始">
-                <i class="fa fa-chevron-left"></i> 新的开始
+              <a href="/2019/12/18/随笔之2019-12-18/" rel="next" title="随笔之2019-12-18">
+                <i class="fa fa-chevron-left"></i> 随笔之2019-12-18
               </a>
             
           </div>
@@ -400,8 +422,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/11/25/敦盛/" rel="prev" title="敦盛">
-                敦盛 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/12/19/目标管理之2019-12-19/" rel="prev" title="目标管理之2019-12-19">
+                目标管理之2019-12-19 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -525,7 +547,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#leetcode第1题"><span class="nav-number">1.</span> <span class="nav-text">leetcode第1题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#题目"><span class="nav-number">1.1.</span> <span class="nav-text">题目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#示例"><span class="nav-number">1.2.</span> <span class="nav-text">示例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#思路"><span class="nav-number">1.3.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题"><span class="nav-number">1.4.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解法1"><span class="nav-number">1.5.</span> <span class="nav-text">解法1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解法2"><span class="nav-number">1.6.</span> <span class="nav-text">解法2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">1.7.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#leetcode第6题"><span class="nav-number">1.</span> <span class="nav-text">leetcode第6题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#题目"><span class="nav-number">2.</span> <span class="nav-text">题目</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#示例"><span class="nav-number">3.</span> <span class="nav-text">示例</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#思路"><span class="nav-number">4.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解法1"><span class="nav-number">5.</span> <span class="nav-text">解法1</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解法2"><span class="nav-number">6.</span> <span class="nav-text">解法2</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">7.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
 
           </div>
