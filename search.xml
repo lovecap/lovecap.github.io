@@ -1,6 +1,219 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>随笔之2019-12-20</title>
+    <url>/2019/12/20/%E9%9A%8F%E7%AC%94%E4%B9%8B2019-12-20/</url>
+    <content><![CDATA[<p>不知道为什么，老感觉自己像个废物，干什么事情都像缺少点自信。</p>
+<p>从道理上讲，可能是因为自己太多次的放弃，感觉自己说的话，从来都没有完成过。</p>
+<p>其实自己真的是这样的一个人，缺乏意志，缺少自信，还喜欢做梦。</p>
+<p>现在说是一步一步做起，但很多事情开了头又忘记了。</p>
+<a id="more"></a>
+<h1 id="关于自我"><a href="#关于自我" class="headerlink" title="关于自我"></a>关于自我</h1><p>最近不知道为什么，老是有一种自我怀疑的状态。</p>
+<p>我想追求的和我在做的，好像是两种截然不同的状态。</p>
+<p>关于这个方面，是一个老生常谈的问题了，就不多说了。</p>
+<p>就是现在自己缺少点自信，缺少点执行力。</p>
+<p>每天想的都挺好，但是自然而然的就放松了警惕。</p>
+<h1 id="渣男标签"><a href="#渣男标签" class="headerlink" title="渣男标签"></a>渣男标签</h1><p>我肯定是一个渣男，喜新厌旧。</p>
+<p>我还是一个痴汉，喜欢围观和偷看。我觉得我的社会工程学学的真的挺好。</p>
+<p>但是在讲话和落落大方这方面，就失去了一些味道。</p>
+<p>我有点拘泥自身，不敢直接面对一些现实，对现实还有一丢丢的幻想。</p>
+<p>不知道为什么，觉得女生漂亮的，都想馋别人身子，但是其实我和他们并没有交际。</p>
+<p>我真正能控制的只有我自己。</p>
+<p>最近又想追冯夏凝，但是我真的那么喜欢她吗？我觉得未必是，喜欢的是一个幻想，喜欢的是一个念想。</p>
+<p>我并没有觉得那么好，我只是不太愿意去接触新的人。再说，这样真的有好结果吗？未必。</p>
+<p>但求问心无愧吧。</p>
+<h1 id="设定一个目标"><a href="#设定一个目标" class="headerlink" title="设定一个目标"></a>设定一个目标</h1><p>我现在缺少自信，我得通过一件一件事情增强自己的目标。</p>
+<p>有两个想法，其一是看资治通鉴，看故事、学古文、写感想。其二就是刷leetcode，重复重复再重复。</p>
+<p>不会写没关系，第二次能再弄懂就行。</p>
+<p>这么一来，小目标就能搞定了。</p>
+<h1 id="七天小目标"><a href="#七天小目标" class="headerlink" title="七天小目标"></a>七天小目标</h1><p>资治通鉴的七篇小短文，弄明白，讲清楚，不要求字数。</p>
+<p>leetcode大概30道吧。一天三道，不难。</p>
+<p>一步一步挑战自己。</p>
+<h1 id="做事不需要太考虑后果"><a href="#做事不需要太考虑后果" class="headerlink" title="做事不需要太考虑后果"></a>做事不需要太考虑后果</h1><p>想做就去做，不用太担心后果。</p>
+<p>自己心安就行。</p>
+<p>别太考虑别人感受。</p>
+<p>都是过客，自己的成长才是真真的。</p>
+]]></content>
+      <tags>
+        <tag>myself</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>leetcode第10题</title>
+    <url>/2019/12/20/leetcode%E7%AC%AC10%E9%A2%98/</url>
+    <content><![CDATA[<h1 id="leetcode第10题"><a href="#leetcode第10题" class="headerlink" title="leetcode第10题"></a>leetcode第10题</h1> <a id="more"></a> 
+<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>暂时看不懂，先跳过，回头再来做。</p>
+]]></content>
+      <tags>
+        <tag>leetcode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>leetcode第9题</title>
+    <url>/2019/12/20/leetcode%E7%AC%AC11%E9%A2%98/</url>
+    <content><![CDATA[<h1 id="leetcode第11题"><a href="#leetcode第11题" class="headerlink" title="leetcode第11题"></a>leetcode第11题</h1> <a id="more"></a> 
+<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>给定 n 个非负整数 a1，a2，…，an，每个数代表坐标中的一个点 (i, ai) 。在坐标内画 n 条垂直线，垂直线 i 的两个端点分别为 (i, ai) 和 (i, 0)。找出其中的两条线，使得它们与 x 轴共同构成的容器可以容纳最多的水。</p>
+<p>说明：你不能倾斜容器，且 n 的值至少为 2。</p>
+<p><img src="https://aliyun-lc-upload.oss-cn-hangzhou.aliyuncs.com/aliyun-lc-upload/uploads/2018/07/25/question_11.jpg" alt="img"></p>
+<p>图中垂直线代表输入数组 [1,8,6,2,5,4,8,3,7]。在此情况下，容器能够容纳水（表示为蓝色部分）的最大值为 49。</p>
+<h1 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h1><p>示例</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入: [1,8,6,2,5,4,8,3,7]</span><br><span class="line">输出: 49</span><br></pre></td></tr></table></figure>
+<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>双指针法，第一次接触。</p>
+<p>思路就在于先确定左右两个端点，计算面积。</p>
+<p>现在求最大面积。</p>
+<p>当长边靠近时，面积受限于短边，不会发生变化。</p>
+<p>与之相反，短边靠近，虽然距离变小，但是短边可能变长，面积有可能增大。</p>
+<p>所以只要移动短边，一直比较就好了。</p>
+<p>解法在下面。</p>
+<h1 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def maxArea(self, height: List[int]) -&gt; int:</span><br><span class="line">        #双指针法</span><br><span class="line">        l=0</span><br><span class="line">        r=len(height)-1</span><br><span class="line">        maxArea=0</span><br><span class="line">        while l&lt;=r:</span><br><span class="line">            tempArea=min(height[l],height[r])*(r-l)</span><br><span class="line">            maxArea=max(maxArea,tempArea)</span><br><span class="line">            if height[l]&lt;=height[r]:</span><br><span class="line">                l=l+1</span><br><span class="line">            else:</span><br><span class="line">                r=r-1</span><br><span class="line">        return maxArea</span><br></pre></td></tr></table></figure>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>认识了双指针法，左右移动，可以大大减少工资量。</p>
+]]></content>
+      <tags>
+        <tag>leetcode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>leetcode第9题</title>
+    <url>/2019/12/20/leetcode%E7%AC%AC9%E9%A2%98/</url>
+    <content><![CDATA[<h1 id="leetcode第9题"><a href="#leetcode第9题" class="headerlink" title="leetcode第9题"></a>leetcode第9题</h1> <a id="more"></a> 
+<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>判断一个整数是否是回文数。回文数是指正序（从左向右）和倒序（从右向左）读都是一样的整数。</p>
+<h1 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h1><p>示例1</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入: 121</span><br><span class="line">输出: true</span><br></pre></td></tr></table></figure>
+<p>示例2</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入: -121</span><br><span class="line">输出: false</span><br><span class="line">解释: 从左向右读, 为 -121 。 从右向左读, 为 121- 。因此它不是一个回文数。</span><br></pre></td></tr></table></figure>
+<p>示例3</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入: 10</span><br><span class="line">输出: false</span><br><span class="line">解释: 从右向左读, 为 01 。因此它不是一个回文数。</span><br></pre></td></tr></table></figure>
+<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>简单题，增强信心专用。</p>
+<p>直接看解法就好。</p>
+<p>解法在下面。</p>
+<h1 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def isPalindrome(self, x: int) -&gt; bool:</span><br><span class="line">        if x&lt;0:</span><br><span class="line">            return False</span><br><span class="line">        y=str(x)</span><br><span class="line">        for i in range(0,(int)(len(y)/2)+1):</span><br><span class="line">            if y[i]!=y[len(y)-i-1]:</span><br><span class="line">                return False</span><br><span class="line">        return True</span><br></pre></td></tr></table></figure>
+<h1 id="高端解法"><a href="#高端解法" class="headerlink" title="高端解法"></a>高端解法</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def isPalindrome(self, x: int) -&gt; bool:</span><br><span class="line">        if str(x)==str(x)[::-1]:</span><br><span class="line">            return True</span><br><span class="line">        else:</span><br><span class="line">            return False</span><br></pre></td></tr></table></figure>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>拿来增强自信使用。</p>
+<p>我的做法不太对，应该直接用列表的倒置比较就行了。比我使用一个循环高端。</p>
+]]></content>
+      <tags>
+        <tag>leetcode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>leetcode第8题</title>
+    <url>/2019/12/20/leetcode%E7%AC%AC8%E9%A2%98/</url>
+    <content><![CDATA[<h1 id="leetcode第8题"><a href="#leetcode第8题" class="headerlink" title="leetcode第8题"></a>leetcode第8题</h1> <a id="more"></a> 
+<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>请你来实现一个 atoi 函数，使其能将字符串转换成整数。</p>
+<p>首先，该函数会根据需要丢弃无用的开头空格字符，直到寻找到第一个非空格的字符为止。</p>
+<p>当我们寻找到的第一个非空字符为正或者负号时，则将该符号与之后面尽可能多的连续数字组合起来，作为该整数的正负号；假如第一个非空字符是数字，则直接将其与之后连续的数字字符组合起来，形成整数。</p>
+<p>该字符串除了有效的整数部分之后也可能会存在多余的字符，这些字符可以被忽略，它们对于函数不应该造成影响。</p>
+<p>注意：假如该字符串中的第一个非空格字符不是一个有效整数字符、字符串为空或字符串仅包含空白字符时，则你的函数不需要进行转换。</p>
+<p>在任何情况下，若函数不能进行有效的转换时，请返回 0。</p>
+<p>说明：</p>
+<p>假设我们的环境只能存储 32 位大小的有符号整数，那么其数值范围为 [−2^31,  2^31 − 1]。如果数值超过这个范围，请返回  INT_MAX (2^31 − 1) 或 INT_MIN (−2^31) 。</p>
+<h1 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h1><p>示例1</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入: &quot;42&quot;</span><br><span class="line">输出: 42</span><br></pre></td></tr></table></figure>
+<p>示例2</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入: &quot;   -42&quot;</span><br><span class="line">输出: -42</span><br><span class="line">解释: 第一个非空白字符为 &apos;-&apos;, 它是一个负号。</span><br><span class="line">     我们尽可能将负号与后面所有连续出现的数字组合起来，最后得到 -42 。</span><br></pre></td></tr></table></figure>
+<p>示例3</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入: &quot;4193 with words&quot;</span><br><span class="line">输出: 4193</span><br><span class="line">解释: 转换截止于数字 &apos;3&apos; ，因为它的下一个字符不为数字。</span><br></pre></td></tr></table></figure>
+<p>示例4</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入: &quot;words and 987&quot;</span><br><span class="line">输出: 0</span><br><span class="line">解释: 第一个非空字符是 &apos;w&apos;, 但它不是数字或正、负号。</span><br><span class="line">     因此无法执行有效的转换。</span><br></pre></td></tr></table></figure>
+<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>被这道题的各种各样的边界条件搞晕了，出现了一系列问题。</p>
+<p>首先，就是没看清题意，就在瞎做，导致测试用例的时候出现一堆问题；</p>
+<p>其次，就是python切片用的不好，发现这些操作不改变本身的值的。</p>
+<p>比如str=str.strip(),str=str[1:]，想的挺美，可它不行。</p>
+<p>最后就是其实这道题可以拿来增强自信，结果被我搞砸了。</p>
+<p>解法在下面。</p>
+<h1 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def myAtoi(self, str: str) -&gt; int:</span><br><span class="line"></span><br><span class="line">        tmp2=&apos;&apos;</span><br><span class="line">        tmp1=str.strip()</span><br><span class="line">        if tmp1==&apos;&apos;:</span><br><span class="line">            return 0</span><br><span class="line">        minusLabel=False</span><br><span class="line">        if tmp1[0]==&apos;-&apos;:</span><br><span class="line">            minusLabel=True</span><br><span class="line">            tmp2=tmp1[1:]</span><br><span class="line">        elif tmp1[0]==&apos;+&apos;:</span><br><span class="line">            tmp2=tmp1[1:]</span><br><span class="line">        else:</span><br><span class="line">            tmp2=tmp1</span><br><span class="line">        result=0</span><br><span class="line">        count=0</span><br><span class="line">        lenS=len(tmp2)</span><br><span class="line">        while count&lt;lenS:</span><br><span class="line">            if not tmp2[count].isdigit():</span><br><span class="line">                break</span><br><span class="line">            result=result*10+(int)(tmp2[count])</span><br><span class="line">            count=count+1</span><br><span class="line">        if minusLabel:</span><br><span class="line">            result=result*(-1)</span><br><span class="line">        if result&gt;2147483647:</span><br><span class="line">            return 2147483647</span><br><span class="line">        if result &lt;-2147483648:</span><br><span class="line">            return -2147483648</span><br><span class="line">        return result</span><br></pre></td></tr></table></figure>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>细心一点，就可以拿来增强自信。</p>
+]]></content>
+      <tags>
+        <tag>leetcode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>目标管理之2019-12-20</title>
+    <url>/2019/12/20/%E7%9B%AE%E6%A0%87%E7%AE%A1%E7%90%86%E4%B9%8B2019-12-20/</url>
+    <content><![CDATA[<h1 id="做事之前要定下目标"><a href="#做事之前要定下目标" class="headerlink" title="做事之前要定下目标"></a>做事之前要定下目标</h1><p>看一本小说到凌晨三点半，价值观很正确，我的做法不正确。</p>
+<p>比你努力聪明的人都在认真学，凭什么自己在划水。</p>
+<p>任务一天天都没干，做不完永远比没做要强。</p>
+<a id="more"></a>
+<h1 id="每周任务"><a href="#每周任务" class="headerlink" title="每周任务"></a>每周任务</h1><table>
+<thead>
+<tr>
+<th style="text-align:center">任务</th>
+<th style="text-align:center">截止日期</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">计算机网络考试</td>
+<td style="text-align:center">周六早上</td>
+</tr>
+<tr>
+<td style="text-align:center">八段锦考试</td>
+<td style="text-align:center">周六中午</td>
+</tr>
+<tr>
+<td style="text-align:center">论文上交</td>
+<td style="text-align:center">周五晚上</td>
+</tr>
+</tbody>
+</table>
+<h1 id="每日待办"><a href="#每日待办" class="headerlink" title="每日待办"></a>每日待办</h1><table>
+<thead>
+<tr>
+<th style="text-align:center">优先级</th>
+<th style="text-align:center">任务</th>
+<th style="text-align:center">完成打卡</th>
+<th style="text-align:center">评分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">重要且紧急</td>
+<td style="text-align:center">阅读，写2000字</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">重要且紧急</td>
+<td style="text-align:center">写引言和第一章</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">重要但不紧急</td>
+<td style="text-align:center">每天冥想三次</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center">8</td>
+</tr>
+<tr>
+<td style="text-align:center">重要但不紧急</td>
+<td style="text-align:center">阅读计算机网络</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center">2</td>
+</tr>
+<tr>
+<td style="text-align:center">重要但不紧急</td>
+<td style="text-align:center">刷leetcode</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center">7</td>
+</tr>
+<tr>
+<td style="text-align:center">重要但不紧急</td>
+<td style="text-align:center">练习八段锦</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center">6</td>
+</tr>
+</tbody>
+</table>
+<h1 id="周五总结"><a href="#周五总结" class="headerlink" title="周五总结"></a>周五总结</h1><p>论文居然一点都没写。</p>
+<p>看来生存的成本不够大，真的。</p>
+<p>得想个办法控制自己。</p>
+]]></content>
+      <tags>
+        <tag>每日目标管理</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>leetcode第7题</title>
     <url>/2019/12/19/leetcode%E7%AC%AC7%E9%A2%98/</url>
     <content><![CDATA[<h1 id="leetcode第7题"><a href="#leetcode第7题" class="headerlink" title="leetcode第7题"></a>leetcode第7题</h1> <a id="more"></a> 
@@ -51,7 +264,7 @@
 </tr>
 </tbody>
 </table>
-<h1 id="每日代办"><a href="#每日代办" class="headerlink" title="每日代办"></a>每日代办</h1><table>
+<h1 id="每日待办"><a href="#每日待办" class="headerlink" title="每日待办"></a>每日待办</h1><table>
 <thead>
 <tr>
 <th style="text-align:center">优先级</th>
@@ -88,19 +301,14 @@
 <tr>
 <td style="text-align:center">重要但不紧急</td>
 <td style="text-align:center">刷leetcode</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
+<td style="text-align:center">√</td>
+<td style="text-align:center">6</td>
 </tr>
 <tr>
 <td style="text-align:center">重要但不紧急</td>
 <td style="text-align:center">练习八段锦</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
+<td style="text-align:center">√</td>
+<td style="text-align:center">6</td>
 </tr>
 </tbody>
 </table>
@@ -274,7 +482,7 @@
 </tr>
 </tbody>
 </table>
-<h1 id="每日代办"><a href="#每日代办" class="headerlink" title="每日代办"></a>每日代办</h1><table>
+<h1 id="每日待办"><a href="#每日待办" class="headerlink" title="每日待办"></a>每日待办</h1><table>
 <thead>
 <tr>
 <th style="text-align:center">优先级</th>
@@ -424,7 +632,7 @@
 </tr>
 </tbody>
 </table>
-<h1 id="每日代办"><a href="#每日代办" class="headerlink" title="每日代办"></a>每日代办</h1><table>
+<h1 id="每日待办"><a href="#每日待办" class="headerlink" title="每日待办"></a>每日待办</h1><table>
 <thead>
 <tr>
 <th style="text-align:center">优先级</th>
@@ -706,6 +914,26 @@
 <p>介绍了因特网的软硬件构成和网络中的一些关键概念。</p>
 <p>针对最关键的协议和层次模型进行了说明。</p>
  <a id="more"></a> 
+<h1 id="计算机网络"><a href="#计算机网络" class="headerlink" title="计算机网络"></a>计算机网络</h1><p>计算机网络是一个网络，它连接了全世界数十亿的计算设备。</p>
+<p><strong>因特网</strong>就是它的一个典型代表。</p>
+<p><strong>端系统</strong>（也称主机，直接与我们相连的设备，如电脑、手机、Pad、小黄车上的锁等等）通过通信链路和分组交换机连接在一起。</p>
+<p>我们现在使用的就是端系统上的<strong>应用程序</strong>，它分布在各个设备上，学名叫做<strong>分布式应用程序</strong>。</p>
+<h1 id="网络构成"><a href="#网络构成" class="headerlink" title="网络构成"></a>网络构成</h1><h2 id="网络边缘"><a href="#网络边缘" class="headerlink" title="网络边缘"></a>网络边缘</h2><p>根据不同接入方式，可以使用家庭接入、企业接入、无线接入这三种接入因特网。</p>
+<p>家庭接入的方式有：数字用户线、电缆、光纤、拨号和卫星；</p>
+<p>企业接入的方式有：以太网和wifi；</p>
+<p>无线接入的方式有：4g和LTE。</p>
+<p>根据接入的物理媒体分为导引型和非导引型。</p>
+<h2 id="网络核心"><a href="#网络核心" class="headerlink" title="网络核心"></a>网络核心</h2><p>网络核心是指通过<strong>网络链路</strong>和<strong>分组交换机</strong>构成的网状网络。</p>
+<p>主要的交换方式是<strong>分组交换</strong>和<strong>电路交换</strong>。</p>
+<p>分组交换就是通过将<strong>报文</strong>划分成小数据块（<strong>分组</strong>）从而传递信息。</p>
+<p>电路交换是指两个端系统间创建端到端连接交换数据。</p>
+<p>二者的区别在于，分组交换是一直在交换数据，只不过进行的时候要排队，并且不用的时候，这个通道可以给其他传输使用；电路交换是创建专用通道，在进行传输的时候，不许其他数据通过。</p>
+<h1 id="协议"><a href="#协议" class="headerlink" title="协议"></a>协议</h1><p>协议就是约定两个通信实体之间交换报文的格式和顺序，以及实体发送和接收报文要应该采取的动作。</p>
+<p>根据网络的协议层次，对协议进行分层，称之为协议栈。</p>
+<p>有两种比较普遍的协议栈，因特网协议栈和OSI模型。</p>
+<h2 id="因特网协议栈"><a href="#因特网协议栈" class="headerlink" title="因特网协议栈"></a>因特网协议栈</h2><p>根据由上至下的书序，因特网分为应用层、运输层、网络层、链路层和物理层。</p>
+<h2 id="OSI模型"><a href="#OSI模型" class="headerlink" title="OSI模型"></a>OSI模型</h2><p>这是在前者的基础上在应用层和运输层之间加入两层，分为应用层、表示层、会话层、运输层、网络层、链路层和物理层。</p>
+<h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>之后部分是对各层协议的充分介绍，本次还缺少对基础概念的补充，之后会分别说明的。</p>
 ]]></content>
       <tags>
         <tag>计算机网络</tag>

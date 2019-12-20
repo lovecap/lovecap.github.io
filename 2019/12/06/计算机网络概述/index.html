@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="自娱自乐，记录生活">
 <meta property="og:description" content="这一篇是对计算机网络的简单介绍。 主要介绍什么是计算机网络？并用因特网为例进行说明。 介绍了因特网的软硬件构成和网络中的一些关键概念。 针对最关键的协议和层次模型进行了说明。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-12-06T07:52:01.611Z">
+<meta property="og:updated_time" content="2019-12-20T10:56:22.007Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="计算机网络概述">
 <meta name="twitter:description" content="这一篇是对计算机网络的简单介绍。 主要介绍什么是计算机网络？并用因特网为例进行说明。 介绍了因特网的软硬件构成和网络中的一些关键概念。 针对最关键的协议和层次模型进行了说明。">
@@ -347,6 +347,26 @@
 <p>介绍了因特网的软硬件构成和网络中的一些关键概念。</p>
 <p>针对最关键的协议和层次模型进行了说明。</p>
  <a id="more"></a> 
+<h1 id="计算机网络"><a href="#计算机网络" class="headerlink" title="计算机网络"></a>计算机网络</h1><p>计算机网络是一个网络，它连接了全世界数十亿的计算设备。</p>
+<p><strong>因特网</strong>就是它的一个典型代表。</p>
+<p><strong>端系统</strong>（也称主机，直接与我们相连的设备，如电脑、手机、Pad、小黄车上的锁等等）通过通信链路和分组交换机连接在一起。</p>
+<p>我们现在使用的就是端系统上的<strong>应用程序</strong>，它分布在各个设备上，学名叫做<strong>分布式应用程序</strong>。</p>
+<h1 id="网络构成"><a href="#网络构成" class="headerlink" title="网络构成"></a>网络构成</h1><h2 id="网络边缘"><a href="#网络边缘" class="headerlink" title="网络边缘"></a>网络边缘</h2><p>根据不同接入方式，可以使用家庭接入、企业接入、无线接入这三种接入因特网。</p>
+<p>家庭接入的方式有：数字用户线、电缆、光纤、拨号和卫星；</p>
+<p>企业接入的方式有：以太网和wifi；</p>
+<p>无线接入的方式有：4g和LTE。</p>
+<p>根据接入的物理媒体分为导引型和非导引型。</p>
+<h2 id="网络核心"><a href="#网络核心" class="headerlink" title="网络核心"></a>网络核心</h2><p>网络核心是指通过<strong>网络链路</strong>和<strong>分组交换机</strong>构成的网状网络。</p>
+<p>主要的交换方式是<strong>分组交换</strong>和<strong>电路交换</strong>。</p>
+<p>分组交换就是通过将<strong>报文</strong>划分成小数据块（<strong>分组</strong>）从而传递信息。</p>
+<p>电路交换是指两个端系统间创建端到端连接交换数据。</p>
+<p>二者的区别在于，分组交换是一直在交换数据，只不过进行的时候要排队，并且不用的时候，这个通道可以给其他传输使用；电路交换是创建专用通道，在进行传输的时候，不许其他数据通过。</p>
+<h1 id="协议"><a href="#协议" class="headerlink" title="协议"></a>协议</h1><p>协议就是约定两个通信实体之间交换报文的格式和顺序，以及实体发送和接收报文要应该采取的动作。</p>
+<p>根据网络的协议层次，对协议进行分层，称之为协议栈。</p>
+<p>有两种比较普遍的协议栈，因特网协议栈和OSI模型。</p>
+<h2 id="因特网协议栈"><a href="#因特网协议栈" class="headerlink" title="因特网协议栈"></a>因特网协议栈</h2><p>根据由上至下的书序，因特网分为应用层、运输层、网络层、链路层和物理层。</p>
+<h2 id="OSI模型"><a href="#OSI模型" class="headerlink" title="OSI模型"></a>OSI模型</h2><p>这是在前者的基础上在应用层和运输层之间加入两层，分为应用层、表示层、会话层、运输层、网络层、链路层和物理层。</p>
+<h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>之后部分是对各层协议的充分介绍，本次还缺少对基础概念的补充，之后会分别说明的。</p>
 
       
     </div>
@@ -441,8 +461,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -457,7 +486,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">27</span>
+                  <span class="site-state-item-count">33</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -493,6 +522,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#计算机网络"><span class="nav-number">1.</span> <span class="nav-text">计算机网络</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#网络构成"><span class="nav-number">2.</span> <span class="nav-text">网络构成</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#网络边缘"><span class="nav-number">2.1.</span> <span class="nav-text">网络边缘</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网络核心"><span class="nav-number">2.2.</span> <span class="nav-text">网络核心</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#协议"><span class="nav-number">3.</span> <span class="nav-text">协议</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#因特网协议栈"><span class="nav-number">3.1.</span> <span class="nav-text">因特网协议栈</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#OSI模型"><span class="nav-number">3.2.</span> <span class="nav-text">OSI模型</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#概述"><span class="nav-number">4.</span> <span class="nav-text">概述</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
