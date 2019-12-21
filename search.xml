@@ -1,6 +1,177 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>礼为上</title>
+    <url>/2019/12/21/%E7%A4%BC%E4%B8%BA%E4%B8%8A/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>少年曾是少年</title>
+    <url>/2019/12/21/%E5%B0%91%E5%B9%B4%E6%9B%BE%E6%98%AF%E5%B0%91%E5%B9%B4/</url>
+    <content><![CDATA[<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>今天看了《少年的你》，觉得还挺有意思的。</p>
+<p>虽然我觉得有些剧情接受不了，但是整部剧还是有很多的闪光点。</p>
+<p>我就谈谈我内心的一点点想法吧。</p>
+<a id="more"></a>
+<h1 id="关于校园欺凌"><a href="#关于校园欺凌" class="headerlink" title="关于校园欺凌"></a>关于校园欺凌</h1><p>虽然我知道校园欺凌一直都在，但是我确实没有这样的经历。</p>
+<p>我的高中同学，大家都很和谐，都没啥问题。</p>
+<p>在我初中的时候，会因为口角和同学打起来，但是这样的经历也不多。老师们很负责，该镇压的镇压，该教育的教育，大部分情况在老师的把控之中，同学们也尊重学习成绩好的同学，不太能搞起来。最关键的是，我打了两三顿之后，边哭边打，就没人敢和我这么搞了。</p>
+<p>其实校园欺凌不仅仅只包括电影里面的剧情，校园冷暴力也是算的。</p>
+<p>我可能也遭受过校园冷暴力，但是我是一个没心没肺的人，冷暴力算什么，是什么东西。我不是很在乎。</p>
+<p>只能说校园欺凌，得老师和大家一起去共同努力，多管管，就会少很多这样的事情。</p>
+<h1 id="关于替罪"><a href="#关于替罪" class="headerlink" title="关于替罪"></a>关于替罪</h1><p>替罪这个东西说出来，可能是一个很神奇的现象。</p>
+<p>我的认知里面，除非利益大过天，咬牙认罪。</p>
+<p>不太可能有一个人为了别人牺牲自己。</p>
+<p>但出现了这样的剧情，也真的是情有可原。小北和陈念都还没长大，在情感的作用下，能出现这样的情况。</p>
+<p>但是代价真的很大，小北几十年牢，陈念上北大。假设20年过去，他们的感情真的还能这么牢吗？时间能冲淡一切。</p>
+<p>我不支持这样的行为。我在面对这个情况的时候，可能就会自然而然退缩。</p>
+<p>我果然是一个利益向的动物，很现实呀。</p>
+<h1 id="关于长大"><a href="#关于长大" class="headerlink" title="关于长大"></a>关于长大</h1><p>剧中老是说，只要高考完，我们就可以长大，我们就会变成大人。</p>
+<p>他这样的目的是想说，只要高考了，我们就可以摆脱现在的处境，我们就能做自己的决定。</p>
+<p>但现实真的是这样的吗？</p>
+<p>是，也不是。</p>
+<p>对于大多人来说，上大学只是一个固有步骤，上完学，还是找不到工作，还是不知道干什么。仍然是随波逐流，上班，考公务员，为各种各样的事情发愁。</p>
+<p>对少部分人来说，能在大学里面，开阔自己的视野，找到自己的目标。他们也愿意为了自己的目标，不断去付出努力，拼搏。再之后，通过上各种各样的途径，改变自己的阶层，接触到在自己生活环境里面接触不到的人，做不上学之前永远不可能做的事情。</p>
+<p>但是长大不是一蹴而就的，长大是自己有能力去解决生活里面出现的各种各样的问题，有能力去追求自己想要的生活。</p>
+<p>有高考，这是一个公平又明显的渠道；但是就算没有高考，也要有这样的决心和努力，我觉得一样能行。</p>
+<p>自己的态度，永远比什么都关键。</p>
+<h1 id="一点想法"><a href="#一点想法" class="headerlink" title="一点想法"></a>一点想法</h1><p>不管怎么说，抛弃我吐槽的剧情，这句剧是一部好剧。</p>
+<p>突然就粉了周冬雨，有点厉害。</p>
+]]></content>
+      <tags>
+        <tag>电影观后感</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>leetcode第14题</title>
+    <url>/2019/12/21/leetcode%E7%AC%AC14%E9%A2%98/</url>
+    <content><![CDATA[<h1 id="leetcode第14题"><a href="#leetcode第14题" class="headerlink" title="leetcode第14题"></a>leetcode第14题</h1> <a id="more"></a> 
+<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>编写一个函数来查找字符串数组中的最长公共前缀。</p>
+<p>如果不存在公共前缀，返回空字符串 <code>&quot;&quot;</code>。</p>
+<h1 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h1><p>示例 1:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入: [&quot;flower&quot;,&quot;flow&quot;,&quot;flight&quot;]</span><br><span class="line">输出: &quot;fl&quot;</span><br></pre></td></tr></table></figure>
+<p>示例 2:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入: [&quot;dog&quot;,&quot;racecar&quot;,&quot;car&quot;]</span><br><span class="line">输出: &quot;&quot;</span><br><span class="line">解释: 输入不存在公共前缀。</span><br></pre></td></tr></table></figure>
+<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>我能想到的就是比较每个开始的地方，出现不同就结束。</p>
+<p>其他或多或少都和这个有关系，时间复杂度是一致的。</p>
+<p>还有一种很神奇的做法，写在解法2，使用index来进行比较。</p>
+<p>还翻到一个非常非常神奇的解法，写在解法3。</p>
+<h1 id="解法1"><a href="#解法1" class="headerlink" title="解法1"></a>解法1</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def longestCommonPrefix(self, strs: List[str]) -&gt; str:</span><br><span class="line">        if strs==None or len(strs)==0:</span><br><span class="line">            return &quot;&quot;</span><br><span class="line">        minLength=9999999999</span><br><span class="line">        for i in range(len(strs)):</span><br><span class="line">            minLength=min(minLength,len(strs[i]))</span><br><span class="line">        for i in range(minLength):</span><br><span class="line">            x=strs[0][i]</span><br><span class="line">            for j in range(1,len(strs)):</span><br><span class="line">                if x!=strs[j][i]:</span><br><span class="line">                    return strs[0][0:i]</span><br><span class="line">        return strs[0][0:minLength]</span><br></pre></td></tr></table></figure>
+<h1 id="解法2"><a href="#解法2" class="headerlink" title="解法2"></a>解法2</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def longestCommonPrefix(self, strs: List[str]) -&gt; str:</span><br><span class="line">        if strs==None or len(strs)==0:</span><br><span class="line">            return &quot;&quot;</span><br><span class="line">        prefix=strs[0]</span><br><span class="line">        for i in range(1,len(strs)):</span><br><span class="line">            while strs[i].find(prefix)!=0:</span><br><span class="line">                prefix=prefix[0:len(prefix)-1]</span><br><span class="line">                if len(prefix)==0:</span><br><span class="line">                    return &quot;&quot;</span><br><span class="line">        return prefix</span><br></pre></td></tr></table></figure>
+<h1 id="解法3"><a href="#解法3" class="headerlink" title="解法3"></a>解法3</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def longestCommonPrefix(self, strs: List[str]) -&gt; str:</span><br><span class="line">        s = &quot;&quot;</span><br><span class="line">        for i in zip(*strs):</span><br><span class="line">            if len(set(i)) == 1:</span><br><span class="line">                s += i[0]</span><br><span class="line">            else:</span><br><span class="line">                break           </span><br><span class="line">        return s</span><br></pre></td></tr></table></figure>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p> 这道题适合增强自信。</p>
+]]></content>
+      <tags>
+        <tag>leetcode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>leetcode第13题</title>
+    <url>/2019/12/21/leetcode%E7%AC%AC13%E9%A2%98/</url>
+    <content><![CDATA[<h1 id="leetcode第13题"><a href="#leetcode第13题" class="headerlink" title="leetcode第13题"></a>leetcode第13题</h1> <a id="more"></a> 
+<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>罗马数字包含以下七种字符： I， V， X， L，C，D 和 M。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">字符          数值</span><br><span class="line">I             1</span><br><span class="line">V             5</span><br><span class="line">X             10</span><br><span class="line">L             50</span><br><span class="line">C             100</span><br><span class="line">D             500</span><br><span class="line">M             1000</span><br></pre></td></tr></table></figure>
+<p>例如， 罗马数字 2 写做 II ，即为两个并列的 1。12 写做 XII ，即为 X + II 。 27 写做  XXVII, 即为 XX + V + II 。</p>
+<p>通常情况下，罗马数字中小的数字在大的数字的右边。但也存在特例，例如 4 不写做 IIII，而是 IV。数字 1 在数字 5 的左边，所表示的数等于大数 5 减小数 1 得到的数值 4 。同样地，数字 9 表示为 IX。这个特殊的规则只适用于以下六种情况：</p>
+<p>I 可以放在 V (5) 和 X (10) 的左边，来表示 4 和 9。</p>
+<p>X 可以放在 L (50) 和 C (100) 的左边，来表示 40 和 90。 </p>
+<p>C 可以放在 D (500) 和 M (1000) 的左边，来表示 400 和 900。</p>
+<p>给定一个整数，将其转为罗马数字。输入确保在 1 到 3999 的范围内。</p>
+<h1 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h1><p>示例 1:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入: &quot;III&quot;</span><br><span class="line">输出: 3</span><br></pre></td></tr></table></figure>
+<p>示例 2:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入: &quot;IV&quot;</span><br><span class="line">输出: 4</span><br></pre></td></tr></table></figure>
+<p>示例 3:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入: &quot;IX&quot;</span><br><span class="line">输出: 9</span><br></pre></td></tr></table></figure>
+<p>示例 4:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入: &quot;LVIII&quot;</span><br><span class="line">输出: 58</span><br><span class="line">解释: L = 50, V= 5, III = 3.</span><br></pre></td></tr></table></figure></p>
+<p>示例 5:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入: &quot;MCMXCIV&quot;</span><br><span class="line">输出: 1994</span><br><span class="line">解释: M = 1000, CM = 900, XC = 90, IV = 4.</span><br></pre></td></tr></table></figure>
+<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>解法1是我能想到的比较Low的解法。</p>
+<p>解法2是比较规则，比别人那学了。</p>
+<p>规则就是：每次比较后一个和前一个的值的大小关系即可：</p>
+<ul>
+<li>前值小于后值，减去前值</li>
+<li>前值大于或等于后值，加上前值</li>
+<li>最后一个值必然是加上的</li>
+</ul>
+<p>具体得看解法1和解法2就行了。</p>
+<h1 id="解法1"><a href="#解法1" class="headerlink" title="解法1"></a>解法1</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def romanToInt(self, s: str) -&gt; int:</span><br><span class="line">        nums = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]</span><br><span class="line">        romans = [&quot;M&quot;, &quot;CM&quot;, &quot;D&quot;, &quot;CD&quot;, &quot;C&quot;, &quot;XC&quot;, &quot;L&quot;, &quot;XL&quot;, &quot;X&quot;, &quot;IX&quot;, &quot;V&quot;, &quot;IV&quot;, &quot;I&quot;]</span><br><span class="line"></span><br><span class="line">        lenS=len(s)</span><br><span class="line">        count=0</span><br><span class="line">        tmp=&apos;&apos;</span><br><span class="line">        result=0</span><br><span class="line">        while count&lt;lenS:</span><br><span class="line">            tmp=s[count]</span><br><span class="line">            count+=1</span><br><span class="line">            if count&lt;(lenS):</span><br><span class="line">                if tmp==&apos;I&apos; and (s[count]==&apos;X&apos; or s[count]==&apos;V&apos;):</span><br><span class="line">                    tmp+=s[count]</span><br><span class="line">                    count+=1</span><br><span class="line">                if tmp==&apos;X&apos; and (s[count]==&apos;C&apos; or s[count]==&apos;L&apos;):</span><br><span class="line">                    tmp+=s[count]</span><br><span class="line">                    count+=1</span><br><span class="line">                if tmp==&apos;C&apos; and (s[count]==&apos;M&apos; or s[count]==&apos;D&apos;):</span><br><span class="line">                    tmp+=s[count]</span><br><span class="line">                    count+=1</span><br><span class="line">            tmpIndex=romans.index(tmp)</span><br><span class="line"></span><br><span class="line">            result+=nums[tmpIndex]</span><br><span class="line">        return result</span><br></pre></td></tr></table></figure>
+<h1 id="解法2"><a href="#解法2" class="headerlink" title="解法2"></a>解法2</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def romanToInt(self, s: str) -&gt; int:</span><br><span class="line">        nums = [1000, 500, 100, 50,  10, 5, 1]</span><br><span class="line">        romans = [&quot;M&quot;, &quot;D&quot;, &quot;C&quot;, &quot;L&quot;,  &quot;X&quot;, &quot;V&quot;, &quot;I&quot;]</span><br><span class="line"></span><br><span class="line">        lenS=len(s)</span><br><span class="line">        count=0</span><br><span class="line">        tmp=&apos;&apos;</span><br><span class="line">        result=0</span><br><span class="line">        while count&lt;lenS:</span><br><span class="line">            tmp=s[count]</span><br><span class="line">            count+=1</span><br><span class="line">            tmpIndex=romans.index(tmp)</span><br><span class="line">            if count&lt;(lenS):</span><br><span class="line">                tmpIndex2=romans.index(s[count])</span><br><span class="line">                if nums[tmpIndex]&gt;=nums[tmpIndex2]:</span><br><span class="line">                    result+=nums[tmpIndex]</span><br><span class="line">                else:</span><br><span class="line">                    result-=nums[tmpIndex]</span><br><span class="line">            if count==lenS:</span><br><span class="line">                result+=nums[tmpIndex]</span><br><span class="line">        return result</span><br></pre></td></tr></table></figure>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>掌握规则比暴力破解好，因为规则可以在范围变大的时候继续使用。</p>
+]]></content>
+      <tags>
+        <tag>leetcode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>leetcode第12题</title>
+    <url>/2019/12/21/leetcode%E7%AC%AC12%E9%A2%98/</url>
+    <content><![CDATA[<h1 id="leetcode第12题"><a href="#leetcode第12题" class="headerlink" title="leetcode第12题"></a>leetcode第12题</h1> <a id="more"></a> 
+<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>罗马数字包含以下七种字符： I， V， X， L，C，D 和 M。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">字符          数值</span><br><span class="line">I             1</span><br><span class="line">V             5</span><br><span class="line">X             10</span><br><span class="line">L             50</span><br><span class="line">C             100</span><br><span class="line">D             500</span><br><span class="line">M             1000</span><br></pre></td></tr></table></figure>
+<p>例如， 罗马数字 2 写做 II ，即为两个并列的 1。12 写做 XII ，即为 X + II 。 27 写做  XXVII, 即为 XX + V + II 。</p>
+<p>通常情况下，罗马数字中小的数字在大的数字的右边。但也存在特例，例如 4 不写做 IIII，而是 IV。数字 1 在数字 5 的左边，所表示的数等于大数 5 减小数 1 得到的数值 4 。同样地，数字 9 表示为 IX。这个特殊的规则只适用于以下六种情况：</p>
+<p>I 可以放在 V (5) 和 X (10) 的左边，来表示 4 和 9。</p>
+<p>X 可以放在 L (50) 和 C (100) 的左边，来表示 40 和 90。 </p>
+<p>C 可以放在 D (500) 和 M (1000) 的左边，来表示 400 和 900。</p>
+<p>给定一个整数，将其转为罗马数字。输入确保在 1 到 3999 的范围内。</p>
+<h1 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h1><p>示例 1:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入: 3</span><br><span class="line">输出: &quot;III&quot;</span><br></pre></td></tr></table></figure>
+<p>示例 2:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入: 4</span><br><span class="line">输出: &quot;IV&quot;</span><br></pre></td></tr></table></figure>
+<p>示例 3:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入: 9</span><br><span class="line">输出: &quot;IX&quot;</span><br></pre></td></tr></table></figure>
+<p>示例 4:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入: 58</span><br><span class="line">输出: &quot;LVIII&quot;</span><br><span class="line">解释: L = 50, V = 5, III = 3.</span><br></pre></td></tr></table></figure></p>
+<p>示例 5:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入: 1994</span><br><span class="line">输出: &quot;MCMXCIV&quot;</span><br><span class="line">解释: M = 1000, CM = 900, XC = 90, IV = 4.</span><br></pre></td></tr></table></figure>
+<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>这里使用了贪心算法。</p>
+<p>首先根据题目的特例，把所有有罗马数字的情况列举出来。</p>
+<p>每一步只要数字比一种情况大就减去它，只要最后值等于0，就得到了最后的结果。</p>
+<h1 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def intToRoman(self, num: int) -&gt; str:</span><br><span class="line">        # 把阿拉伯数字与罗马数字可能出现的所有情况和对应关系，放在两个数组中</span><br><span class="line">        # 并且按照阿拉伯数字的大小降序排列，这是贪心选择思想</span><br><span class="line">        nums = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]</span><br><span class="line">        romans = [&quot;M&quot;, &quot;CM&quot;, &quot;D&quot;, &quot;CD&quot;, &quot;C&quot;, &quot;XC&quot;, &quot;L&quot;, &quot;XL&quot;, &quot;X&quot;, &quot;IX&quot;, &quot;V&quot;, &quot;IV&quot;, &quot;I&quot;]</span><br><span class="line"></span><br><span class="line">        index = 0</span><br><span class="line">        res = &apos;&apos;</span><br><span class="line">        while index &lt; 13:</span><br><span class="line">            # 注意：这里是等于号，表示尽量使用大的&quot;面值&quot;</span><br><span class="line">            while num &gt;= nums[index]:</span><br><span class="line">                res += romans[index]</span><br><span class="line">                num -= nums[index]</span><br><span class="line">            index += 1</span><br><span class="line">        return res</span><br></pre></td></tr></table></figure>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>贪心算法不太懂具体什么意思，只说是每一步最优，能得到最后结果。</p>
+<p>本题中题目有限制，所以这么干没啥问题。</p>
+]]></content>
+      <tags>
+        <tag>leetcode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>目标管理之2019-12-21</title>
+    <url>/2019/12/21/%E7%9B%AE%E6%A0%87%E7%AE%A1%E7%90%86%E4%B9%8B2019-12-21/</url>
+    <content><![CDATA[<h1 id="做事之前要定下目标"><a href="#做事之前要定下目标" class="headerlink" title="做事之前要定下目标"></a>做事之前要定下目标</h1><p>心理学小实验进行中。</p>
+<a id="more"></a>
+<h1 id="每周任务"><a href="#每周任务" class="headerlink" title="每周任务"></a>每周任务</h1><table>
+<thead>
+<tr>
+<th style="text-align:center">任务</th>
+<th style="text-align:center">截止日期</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">计算机网络考试</td>
+<td style="text-align:center">周六早上</td>
+</tr>
+<tr>
+<td style="text-align:center">八段锦考试</td>
+<td style="text-align:center">周六中午</td>
+</tr>
+<tr>
+<td style="text-align:center">论文上交</td>
+<td style="text-align:center">周五晚上</td>
+</tr>
+</tbody>
+</table>
+<h1 id="周六总结"><a href="#周六总结" class="headerlink" title="周六总结"></a>周六总结</h1><p>论文是彻底没做，得抓紧时间了。</p>
+<p>八段锦考试今天应该能行，练得差不多了。</p>
+<p>计算机网络考试应该是不行的，没咋看书的内容。</p>
+<p>周六应该看一部电影，争取把看直播替换成看书或者看电影。</p>
+<h1 id="下一阶段工作目标"><a href="#下一阶段工作目标" class="headerlink" title="下一阶段工作目标"></a>下一阶段工作目标</h1><p>下个阶段工作的目标在于提交论文，刷leetcode，学习计算机网络和看资治通鉴。</p>
+]]></content>
+      <tags>
+        <tag>每日目标管理</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>随笔之2019-12-20</title>
     <url>/2019/12/20/%E9%9A%8F%E7%AC%94%E4%B9%8B2019-12-20/</url>
     <content><![CDATA[<p>不知道为什么，老感觉自己像个废物，干什么事情都像缺少点自信。</p>
