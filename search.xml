@@ -1,9 +1,218 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>leetcode第20题</title>
+    <url>/2019/12/23/leetcode%E7%AC%AC20%E9%A2%98/</url>
+    <content><![CDATA[<h1 id="leetcode第20题"><a href="#leetcode第20题" class="headerlink" title="leetcode第20题"></a>leetcode第20题</h1> <a id="more"></a> 
+<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>给定一个只包括 ‘(‘，’)’，’{‘，’}’，’[‘，’]’ 的字符串，判断字符串是否有效。</p>
+<p>有效字符串需满足：</p>
+<p>左括号必须用相同类型的右括号闭合。</p>
+<p>左括号必须以正确的顺序闭合。</p>
+<p>注意空字符串可被认为是有效字符串。</p>
+<h1 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入: &quot;()&quot;</span><br><span class="line">输出: true</span><br><span class="line"></span><br><span class="line">输入: &quot;()[]&#123;&#125;&quot;</span><br><span class="line">输出: true</span><br><span class="line"></span><br><span class="line">输入: &quot;(]&quot;</span><br><span class="line">输出: false</span><br><span class="line"></span><br><span class="line">输入: &quot;([)]&quot;</span><br><span class="line">输出: false</span><br><span class="line"></span><br><span class="line">输入: &quot;&#123;[]&#125;&quot;</span><br><span class="line">输出: true</span><br></pre></td></tr></table></figure>
+<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>思路就是左括号入栈，右括号进行比较。</p>
+<p>右括号比较时如果不对应，就直接返回False。如果对应就让栈里的左括号出栈。</p>
+<p>我遇到一个问题就是d[‘[‘]是会出问题的，去百度了一个答案。</p>
+<p>他用dic.values和dic.keys很好的解决了这个问题。</p>
+<p>答案贴在解法里面。</p>
+<h1 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def isValid(self, s: str) -&gt; bool:</span><br><span class="line">        stack=[]                            #设置一个列表，把该列表当做栈来使用即可。</span><br><span class="line">        dic=&#123;&apos;)&apos;:&apos;(&apos;,&apos;&#125;&apos;:&apos;&#123;&apos;,&apos;]&apos;:&apos;[&apos;&#125;       #使用字典存储括号,并且右括号为key,左括号为value</span><br><span class="line">        for char in s:</span><br><span class="line">            if char in dic.values():        #左括号就入栈</span><br><span class="line">                stack.append(char)</span><br><span class="line">            elif char in dic.keys():        #有右括号的话就进行比较，</span><br><span class="line">                if stack==[] or dic[char] != stack.pop():</span><br><span class="line">                    return False</span><br><span class="line">            else:</span><br><span class="line">                return False                #不再字典中的输入直接输出错误</span><br><span class="line"></span><br><span class="line">        return stack==[]</span><br></pre></td></tr></table></figure>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>使用字典时使用符号会出错。</p>
+<p>所以得学会使用dic.values和dic.keys。</p>
+]]></content>
+      <tags>
+        <tag>leetcode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>leetcode第19题</title>
+    <url>/2019/12/23/leetcode%E7%AC%AC19%E9%A2%98/</url>
+    <content><![CDATA[<h1 id="leetcode第19题"><a href="#leetcode第19题" class="headerlink" title="leetcode第19题"></a>leetcode第19题</h1> <a id="more"></a> 
+<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>给定一个链表，删除链表的倒数第 <em>n</em> 个节点，并且返回链表的头结点。</p>
+<p><strong>说明：</strong></p>
+<p>给定的 <em>n</em> 保证是有效的。</p>
+<p><strong>进阶：</strong></p>
+<p>你能尝试使用一趟扫描实现吗？</p>
+<h1 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">给定一个链表: 1-&gt;2-&gt;3-&gt;4-&gt;5, 和 n = 2.</span><br><span class="line"></span><br><span class="line">当删除了倒数第二个节点后，链表变为 1-&gt;2-&gt;3-&gt;5.</span><br></pre></td></tr></table></figure>
+<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>一开始想直接搞，后来发现情况很多，会出现很多问题，再加上有提示只使用一遍扫描，就卡住了。</p>
+<p>百度了一个答案，非常的巧妙。</p>
+<p>把所有节点放在列表中进行处理，处理完还回去就行了。</p>
+<p>真的很妙。</p>
+<p>贴在解法里面。</p>
+<h1 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Definition for singly-linked list.</span><br><span class="line"># class ListNode:</span><br><span class="line">#     def __init__(self, x):</span><br><span class="line">#         self.val = x</span><br><span class="line">#         self.next = None</span><br><span class="line"></span><br><span class="line">class Solution:</span><br><span class="line">    def removeNthFromEnd(self, head: ListNode, n: int) -&gt; ListNode:</span><br><span class="line">        l=[]</span><br><span class="line">        while head:</span><br><span class="line">            l.append(head)</span><br><span class="line">            head=head.next</span><br><span class="line">        if len(l)==1:</span><br><span class="line">            return None</span><br><span class="line">        </span><br><span class="line">        if len(l)==n:</span><br><span class="line">            return l[1]</span><br><span class="line">        </span><br><span class="line">        if n==1:</span><br><span class="line">            l[-2].next=None</span><br><span class="line">        else:</span><br><span class="line">            l[-(n+1)].next=l[-(n-1)]</span><br><span class="line">        return l[0]</span><br></pre></td></tr></table></figure>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>学习用列表辅助处理链表。</p>
+]]></content>
+      <tags>
+        <tag>leetcode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>leetcode第18题</title>
+    <url>/2019/12/23/leetcode%E7%AC%AC18%E9%A2%98/</url>
+    <content><![CDATA[<h1 id="leetcode第18题"><a href="#leetcode第18题" class="headerlink" title="leetcode第18题"></a>leetcode第18题</h1> <a id="more"></a> 
+<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>给定一个包含 n 个整数的数组 nums 和一个目标值 target，判断 nums 中是否存在四个元素 a，b，c 和 d ，使得 a + b + c + d 的值与 target 相等？找出所有满足条件且不重复的四元组。</p>
+<p>注意：</p>
+<p>答案中不可以包含重复的四元组。</p>
+<h1 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">给定数组 nums = [1, 0, -1, 0, -2, 2]，和 target = 0。</span><br><span class="line"></span><br><span class="line">满足要求的四元组集合为：</span><br><span class="line">[</span><br><span class="line">  [-1,  0, 0, 1],</span><br><span class="line">  [-2, -1, 1, 2],</span><br><span class="line">  [-2,  0, 0, 2]</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>就和15题三数之和一个做法，就是在实现的时候，因为对不太了解，多花了好多时间。</p>
+<p>贴在解法1，看看就行了。运算好慢啊。</p>
+<p>找了一个高端解法2。</p>
+<p>解法2看不太懂，下次回头来看。</p>
+<h1 id="解法1"><a href="#解法1" class="headerlink" title="解法1"></a>解法1</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class Solution:</span><br><span class="line"></span><br><span class="line">    def fourSum(self,nums, target) :</span><br><span class="line">        nums.sort()</span><br><span class="line">        #print(nums)</span><br><span class="line">        result=[]</span><br><span class="line">        for i in range(len(nums)-3):</span><br><span class="line">            #print(result)</span><br><span class="line"></span><br><span class="line">            if i&gt;0 and nums[i]==nums[i-1]:</span><br><span class="line">                continue</span><br><span class="line">            for j in range(-1, -(len(nums)) + 2, -1):</span><br><span class="line">                if j&lt;-1 and nums[j]==nums[j+1]:</span><br><span class="line">                    continue</span><br><span class="line">                l=i+1</span><br><span class="line">                r=j+len(nums)-1</span><br><span class="line">                while l&lt;r:</span><br><span class="line">                    tmp=nums[i]+nums[j]+nums[l]+nums[r]</span><br><span class="line">                    #print(tmp,l,r,&apos;test&apos;)</span><br><span class="line">                    if tmp==target:</span><br><span class="line">                        #print(i,l,r,j+len(nums))</span><br><span class="line">                        result.append([nums[i],nums[j],nums[l],nums[r]])</span><br><span class="line">                        l+=1</span><br><span class="line">                        while l&lt;r and nums[l]==nums[l-1]:</span><br><span class="line">                                l+=1</span><br><span class="line">                    if tmp&lt;target:</span><br><span class="line">                        l+=1</span><br><span class="line">                        while l&lt;r and nums[l]==nums[l-1]:</span><br><span class="line">                                l+=1</span><br><span class="line">                    if tmp&gt;target:</span><br><span class="line">                        r-=1</span><br><span class="line">                        while l&lt;r and nums[r]==nums[r+1]:</span><br><span class="line">                                r-=1</span><br><span class="line">        return result</span><br></pre></td></tr></table></figure>
+<h1 id="解法2"><a href="#解法2" class="headerlink" title="解法2"></a>解法2</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class Solution:</span><br><span class="line"></span><br><span class="line">    def fourSum(self,nums, target) :</span><br><span class="line">        if len(nums) &lt; 4:</span><br><span class="line">            return []</span><br><span class="line">        </span><br><span class="line">        # 将数列进行排序并且每个数字只保存其中的4个</span><br><span class="line">        sort_nums = sorted(nums)</span><br><span class="line">        new_nums = [sort_nums[0]]</span><br><span class="line">        count = 1    # 统计当前数字在new_nums中的个数</span><br><span class="line">        for num in sort_nums[1:]:</span><br><span class="line">            if num == new_nums[-1]:</span><br><span class="line">                if count == 4:</span><br><span class="line">                    continue</span><br><span class="line">                else:</span><br><span class="line">                    count += 1</span><br><span class="line">                    new_nums.append(num)</span><br><span class="line">            else:</span><br><span class="line">                count = 1</span><br><span class="line">                new_nums.append(num)</span><br><span class="line">                </span><br><span class="line">        # 遍历new_nums并找出所有符合条件的结果</span><br><span class="line">        sum_dict = &#123;&#125;    # 将数对的和作为键把数对保存在字典中</span><br><span class="line">        result = set()</span><br><span class="line">        min_sum = new_nums[0] + new_nums[1]</span><br><span class="line">        max_sum = new_nums[-1] + new_nums[-2]</span><br><span class="line">        n = len(new_nums)</span><br><span class="line">        for i in range(n):</span><br><span class="line">            for j in range(i+1, n):</span><br><span class="line">                cur_sum = new_nums[i] + new_nums[j]</span><br><span class="line">                # 如果当前数对加上最小数对已经大于target，那么它及其后面的数对与任何数对的和都大于target，提前结束循环</span><br><span class="line">                if cur_sum + min_sum &gt; target:</span><br><span class="line">                    break</span><br><span class="line">                # 如果当前数对加上最大数对仍小于target，那么它和任何数对的和一定都小于target，因此没必要保存它的和</span><br><span class="line">                if cur_sum + max_sum &lt; target:</span><br><span class="line">                    continue</span><br><span class="line">                # 如果当前遍历过相同数对那么进行下一次遍历</span><br><span class="line">                if new_nums[j] == new_nums[j-1] and j &gt; i+1:</span><br><span class="line">                    continue</span><br><span class="line">                </span><br><span class="line">                # 判断是否存在已经保存过的数对的和与当前数对的和为target</span><br><span class="line">                if target - cur_sum in sum_dict:</span><br><span class="line">                    for p in sum_dict[target-cur_sum]:</span><br><span class="line">                        if i in p or j == p[1]:</span><br><span class="line">                            continue</span><br><span class="line">                        result.add(tuple(sorted([new_nums[p[0]], new_nums[p[1]], new_nums[i], new_nums[j]])))</span><br><span class="line">                        </span><br><span class="line">                # 无论是否存在配对的数对都要把当前数对的结果存入字典以cur_sum为键的桶中</span><br><span class="line">                if cur_sum in sum_dict:</span><br><span class="line">                    sum_dict[cur_sum].append([i, j])</span><br><span class="line">                else:</span><br><span class="line">                    sum_dict[cur_sum] = [[i, j]]</span><br><span class="line">                </span><br><span class="line">        return [list(res) for res in result]</span><br></pre></td></tr></table></figure>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>基本工具没掌握熟练，不应该啊！</p>
+]]></content>
+      <tags>
+        <tag>leetcode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>德才兼备</title>
+    <url>/2019/12/22/%E5%BE%B7%E6%89%8D%E5%85%BC%E5%A4%87/</url>
+    <content><![CDATA[<p>才者，德之资也；德者，才之帅也。</p>
+<a id="more"></a>
+<h1 id="德为先"><a href="#德为先" class="headerlink" title="德为先"></a>德为先</h1><p>德才兼备意味着才能可以处理各种问题，德行不会被别人冒犯。</p>
+<p>这是一个很完美的状态，称之为圣人。</p>
+<p>但是人和人之间都会有各种各样的问题。</p>
+<p>无才有德，称之为君子；有才无德，则是小人；无才无德，是谓愚民。</p>
+<p>我们在生活里面，更加希望和君子打交道，因为他们有自身高尚的品德，不会因为利益翻脸。</p>
+<p>而小人则不一样了，他们只能看到自己身上的好处，看不到别人，也不会为其他人考虑，和他们交往有害无利。</p>
+<p>智伯选择了各个方面都很优秀的智瑶作为自己的继承者，但是智瑶身上缺少仁。</p>
+<p>他用自己的强处去欺凌别人，与别人结怨；再强行索要别人土地，认为没有人敢反抗自己；出卖衷心辅佐自己的大臣，最后落得个兵败被杀的结局。</p>
+<p>这一切的原因，就是智瑶缺少德行，没有尊重别人，还去欺凌其他君主。</p>
+<p>本末倒置，引起了几个国家的共同反抗，最终被人推翻。</p>
+<p>这提醒我们，在日常生活中和别人打交道的时候要注意德行，从细节做起。</p>
+<p>言必行，行必果。</p>
+<p>这些都是最基本的要求，与人交往，要用行动展示自己的德行。</p>
+<p>做一个君子，而不是惹人厌的小人。</p>
+<h1 id="善于观察"><a href="#善于观察" class="headerlink" title="善于观察"></a>善于观察</h1><p>我们要学会善于观察生活，善于发现细节。</p>
+<p>智瑶联合魏恒子、韩康子攻打赵襄子时，絺疵说这两个人一定会谋反。</p>
+<p>他的依据是，快要攻下赵国时，三家可以一起分享赵国的土地，本来应当是一件喜悦的事情，但是恰恰相反，这两个人有忧虑之色。</p>
+<p>说明他们想到了自己也说不定会有同样的遭遇，有唇亡齿寒的观感，不支持智瑶的决策。</p>
+<p>其二，絺疵一看魏恒子和韩康子看自己的神情不对，满是厌恶，就明白自己被卖了。</p>
+<p>这件事情就说明絺疵特别善于把握人性和局势，能从细节里面分析到底发生了什么。</p>
+<h1 id="严守秘密"><a href="#严守秘密" class="headerlink" title="严守秘密"></a>严守秘密</h1><p>还是絺疵的故事。</p>
+<p>絺疵和智瑶说出自己的判断，智瑶反手就把絺疵给卖了。</p>
+<p>不选择信任自己的臣子，反而更加愿意别人。</p>
+<p>这里面有两个问题，第一就是出卖自己人，这件事情根本上就做错了。</p>
+<p>只要出卖过一次，以后就没人愿意接近了。</p>
+<p>有过背叛行为，是会被钉上耻辱柱的。</p>
+<p>能保守秘密，是一种担当，也是一种责任。</p>
+<h1 id="明辨是非"><a href="#明辨是非" class="headerlink" title="明辨是非"></a>明辨是非</h1><p>在情报面前，要有能自己判断事实的本领，不能被牵着走。</p>
+<p>要有自己弄懂一切的决心，听风就是雨的性格，也是要不得的。</p>
+<p>得到一个消息的时候，要等一等，也要善于怀疑。</p>
+<p>在现在这个社会，事件翻转层出不穷，要学会辨证地观察问题，掌握事情的真相。</p>
+<p>有明辨是非的能力，能够辨证看待问题，也是我要学习的。</p>
+]]></content>
+      <tags>
+        <tag>阅读记录</tag>
+        <tag>资治通鉴</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>leetcode第17题</title>
+    <url>/2019/12/22/leetcode%E7%AC%AC17%E9%A2%98/</url>
+    <content><![CDATA[<h1 id="leetcode第17题"><a href="#leetcode第17题" class="headerlink" title="leetcode第17题"></a>leetcode第17题</h1> <a id="more"></a> 
+<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>给定一个仅包含数字 <code>2-9</code> 的字符串，返回所有它能表示的字母组合。</p>
+<p>给出数字到字母的映射如下（与电话按键相同）。注意 1 不对应任何字母。</p>
+<h1 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入：&quot;23&quot;</span><br><span class="line">输出：[&quot;ad&quot;, &quot;ae&quot;, &quot;af&quot;, &quot;bd&quot;, &quot;be&quot;, &quot;bf&quot;, &quot;cd&quot;, &quot;ce&quot;, &quot;cf&quot;].</span><br></pre></td></tr></table></figure>
+<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>知道要用递归实现，但是我不知道如何用递归实现存放结果。</p>
+<p>百度找了别人的程序研究了一下。</p>
+<p>首先确定递归的结束条件是：数字只剩一个，返回一个列表。</p>
+<p>递归的循环条件是：数字不断减少。</p>
+<p>递归在不断添加结果就是：对每一个开始的数字，确定它的初始几个字母。</p>
+<pre><code>for i in next_dig:
+    for j in phone[digits[0]]:
+        output.append(j+i)
+</code></pre><p>关键点是这句话。先看它的一个返回结果，以‘234’为例子。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">adg</span><br><span class="line">bdg</span><br><span class="line">cdg</span><br><span class="line">aeg</span><br><span class="line">beg</span><br><span class="line">ceg</span><br><span class="line">afg</span><br><span class="line">bfg</span><br><span class="line">cfg</span><br><span class="line">adh</span><br><span class="line">bdh</span><br><span class="line">cdh</span><br><span class="line">aeh</span><br><span class="line">beh</span><br><span class="line">ceh</span><br><span class="line">afh</span><br><span class="line">bfh</span><br><span class="line">cfh</span><br><span class="line">adi</span><br><span class="line">bdi</span><br><span class="line">cdi</span><br><span class="line">aei</span><br><span class="line">bei</span><br><span class="line">cei</span><br><span class="line">afi</span><br><span class="line">bfi</span><br><span class="line">cfi</span><br></pre></td></tr></table></figure>
+<p>它首先是添加第一个数字对应的字母，再依次添加接下来数字对应的字母，直到最后一个时不再添加，返回对应字母。</p>
+<p>看一下next_dig的状态：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[&apos;g&apos;, &apos;h&apos;, &apos;i&apos;]</span><br><span class="line">[&apos;g&apos;, &apos;h&apos;, &apos;i&apos;]</span><br><span class="line">[&apos;g&apos;, &apos;h&apos;, &apos;i&apos;]</span><br><span class="line">[&apos;dg&apos;, &apos;eg&apos;, &apos;fg&apos;, &apos;dh&apos;, &apos;eh&apos;, &apos;fh&apos;, &apos;di&apos;, &apos;ei&apos;, &apos;fi&apos;]</span><br><span class="line">[&apos;dg&apos;, &apos;eg&apos;, &apos;fg&apos;, &apos;dh&apos;, &apos;eh&apos;, &apos;fh&apos;, &apos;di&apos;, &apos;ei&apos;, &apos;fi&apos;]</span><br><span class="line">[&apos;dg&apos;, &apos;eg&apos;, &apos;fg&apos;, &apos;dh&apos;, &apos;eh&apos;, &apos;fh&apos;, &apos;di&apos;, &apos;ei&apos;, &apos;fi&apos;]</span><br><span class="line">[&apos;dg&apos;, &apos;eg&apos;, &apos;fg&apos;, &apos;dh&apos;, &apos;eh&apos;, &apos;fh&apos;, &apos;di&apos;, &apos;ei&apos;, &apos;fi&apos;]</span><br><span class="line">[&apos;dg&apos;, &apos;eg&apos;, &apos;fg&apos;, &apos;dh&apos;, &apos;eh&apos;, &apos;fh&apos;, &apos;di&apos;, &apos;ei&apos;, &apos;fi&apos;]</span><br><span class="line">[&apos;dg&apos;, &apos;eg&apos;, &apos;fg&apos;, &apos;dh&apos;, &apos;eh&apos;, &apos;fh&apos;, &apos;di&apos;, &apos;ei&apos;, &apos;fi&apos;]</span><br><span class="line">[&apos;dg&apos;, &apos;eg&apos;, &apos;fg&apos;, &apos;dh&apos;, &apos;eh&apos;, &apos;fh&apos;, &apos;di&apos;, &apos;ei&apos;, &apos;fi&apos;]</span><br><span class="line">[&apos;dg&apos;, &apos;eg&apos;, &apos;fg&apos;, &apos;dh&apos;, &apos;eh&apos;, &apos;fh&apos;, &apos;di&apos;, &apos;ei&apos;, &apos;fi&apos;]</span><br><span class="line">[&apos;dg&apos;, &apos;eg&apos;, &apos;fg&apos;, &apos;dh&apos;, &apos;eh&apos;, &apos;fh&apos;, &apos;di&apos;, &apos;ei&apos;, &apos;fi&apos;]</span><br></pre></td></tr></table></figure>
+<p>可以看出，是先深入到最后一层，得到返回结果，再逐步进行计算的。</p>
+<p>这就是递归的内涵。</p>
+<h1 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def letterCombinations(self, digits: str) -&gt; List[str]:</span><br><span class="line">        phone = &#123;&apos;2&apos;: [&apos;a&apos;, &apos;b&apos;, &apos;c&apos;],</span><br><span class="line">            &apos;3&apos;: [&apos;d&apos;, &apos;e&apos;, &apos;f&apos;],</span><br><span class="line">            &apos;4&apos;: [&apos;g&apos;, &apos;h&apos;, &apos;i&apos;],</span><br><span class="line">            &apos;5&apos;: [&apos;j&apos;, &apos;k&apos;, &apos;l&apos;],</span><br><span class="line">            &apos;6&apos;: [&apos;m&apos;, &apos;n&apos;, &apos;o&apos;],</span><br><span class="line">            &apos;7&apos;: [&apos;p&apos;, &apos;q&apos;, &apos;r&apos;, &apos;s&apos;],</span><br><span class="line">            &apos;8&apos;: [&apos;t&apos;, &apos;u&apos;, &apos;v&apos;],</span><br><span class="line">            &apos;9&apos;: [&apos;w&apos;, &apos;x&apos;, &apos;y&apos;, &apos;z&apos;]&#125;</span><br><span class="line"></span><br><span class="line">        output=[]</span><br><span class="line">        if digits==&apos;&apos;:</span><br><span class="line">            return []</span><br><span class="line">        </span><br><span class="line">        if len(digits)==1:</span><br><span class="line">            return phone[digits[0]]</span><br><span class="line">        else:</span><br><span class="line">            next_dig=self.letterCombinations(digits[1:])</span><br><span class="line">            for i in next_dig:</span><br><span class="line">                for j in phone[digits[0]]:</span><br><span class="line">                    output.append(j+i)</span><br><span class="line">        return output</span><br></pre></td></tr></table></figure>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>对递归的认识要深刻一点。</p>
+]]></content>
+      <tags>
+        <tag>leetcode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>leetcode第16题</title>
+    <url>/2019/12/22/leetcode%E7%AC%AC16%E9%A2%98/</url>
+    <content><![CDATA[<h1 id="leetcode第16题"><a href="#leetcode第16题" class="headerlink" title="leetcode第16题"></a>leetcode第16题</h1> <a id="more"></a> 
+<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>给定一个包括 n 个整数的数组 nums 和 一个目标值 target。找出 nums 中的三个整数，使得它们的和与 target 最接近。返回这三个数的和。假定每组输入只存在唯一答案。</p>
+<h1 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">例如，给定数组 nums = [-1，2，1，-4], 和 target = 1.</span><br><span class="line"></span><br><span class="line">与 target 最接近的三个数的和为 2. (-1 + 2 + 1 = 2).</span><br></pre></td></tr></table></figure>
+<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>思路和15题差不多，就是双指针比较那一套，就不重复说了，贴在解法1.</p>
+<p>解法2的速度比我高了好几个档次，学习一下。</p>
+<p>解法2的思路是首先用二分查找法找出第二个数字的位置，增加效率。</p>
+<p>主要代码是left=max(i+1,bisect.bisect_left(nums, target-nums[l-1]-v)-2)；</p>
+<p>bisect.bisect_left（nums,target）是找到nums数组中和target最接近的索引。</p>
+<p>那为什么要减2？</p>
+<p>是确保没找到对应位置的时候，能出现在中间，而不是偏移。</p>
+<p>其他的思路是一致的。</p>
+<p>看解法2就行了。</p>
+<h1 id="解法1"><a href="#解法1" class="headerlink" title="解法1"></a>解法1</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def threeSumClosest(self, nums: List[int], target: int) -&gt; int:</span><br><span class="line">        nums.sort()</span><br><span class="line">        result = sum(nums[0:3])</span><br><span class="line">        minLength=sum(nums[0:3])</span><br><span class="line">        </span><br><span class="line">        for i in range(len(nums) - 2):</span><br><span class="line">            minTmpLength=sum(nums[i:i+3])</span><br><span class="line">            tmp=nums[i]</span><br><span class="line">            L = i + 1</span><br><span class="line">            R = len(nums) - 1</span><br><span class="line">            while L &lt; R:</span><br><span class="line">                compareNum =nums[i]+nums[L]+nums[R]</span><br><span class="line">                if abs(minTmpLength-target)&gt;=abs(compareNum-target):</span><br><span class="line">                    minTmpLength=compareNum</span><br><span class="line">                if compareNum &gt; target:</span><br><span class="line">                    R -= 1</span><br><span class="line">                if compareNum &lt;target:</span><br><span class="line">                    L += 1</span><br><span class="line">                if compareNum == target:</span><br><span class="line">                    return target</span><br><span class="line">            if abs(minLength-target)&gt;=abs(minTmpLength-target):</span><br><span class="line">                minLength=minTmpLength</span><br><span class="line">        result =minLength</span><br><span class="line">        return result</span><br></pre></td></tr></table></figure>
+<h1 id="解法2"><a href="#解法2" class="headerlink" title="解法2"></a>解法2</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def threeSumClosest(self, nums: List[int], target: int) -&gt; int:</span><br><span class="line">        l=len(nums)</span><br><span class="line">        nums.sort()</span><br><span class="line">        diff=float(&apos;inf&apos;)</span><br><span class="line">        s=nums[0]+nums[1]+nums[2]</span><br><span class="line">        for i,v in enumerate(nums):</span><br><span class="line">            if i==0 or v!=nums[i-1]:</span><br><span class="line">                left=max(i+1,bisect.bisect_left(nums, target-nums[l-1]-v)-2)</span><br><span class="line">                print(i,left)</span><br><span class="line">                right=l-1</span><br><span class="line">                while left&lt;right:</span><br><span class="line">                    v1=nums[left]</span><br><span class="line">                    v2=nums[right]</span><br><span class="line">                    s1=v+v1+v2</span><br><span class="line">                    diff1=abs(s1-target)</span><br><span class="line">                    if diff&gt;diff1:</span><br><span class="line">                        diff=diff1</span><br><span class="line">                        s=s1</span><br><span class="line">                    if diff==0:</span><br><span class="line">                        return s1</span><br><span class="line">                    if s1&gt;target:</span><br><span class="line">                        while right&gt;0 and nums[right-1]==v2:</span><br><span class="line">                            right-=1</span><br><span class="line">                        right-=1</span><br><span class="line">                    else:</span><br><span class="line">                        while left&lt;l-1 and nums[left+1]==v1:</span><br><span class="line">                            left+=1</span><br><span class="line">                        left+=1</span><br><span class="line">        return s</span><br></pre></td></tr></table></figure>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>二分查找是个好东西啊。</p>
+]]></content>
+      <tags>
+        <tag>leetcode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>leetcode第15题</title>
+    <url>/2019/12/22/leetcode%E7%AC%AC15%E9%A2%98/</url>
+    <content><![CDATA[<h1 id="leetcode第15题"><a href="#leetcode第15题" class="headerlink" title="leetcode第15题"></a>leetcode第15题</h1> <a id="more"></a> 
+<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>给定一个包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 a，b，c ，使得 a + b + c = 0 ？找出所有满足条件且不重复的三元组。</p>
+<p>注意：答案中不可以包含重复的三元组。</p>
+<h1 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">例如, 给定数组 nums = [-1, 0, 1, 2, -1, -4]，</span><br><span class="line"></span><br><span class="line">满足要求的三元组集合为：</span><br><span class="line">[</span><br><span class="line">  [-1, 0, 1],</span><br><span class="line">  [-1, -1, 2]</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>主要思路有两点，第1点在于双指针确定和，第2点在于去掉重复的类型。</p>
+<p>首先是将数组排序，排序完成后的数组才能使用双指针法。</p>
+<p>双指针法就是一个while循环，不断比较，如果有相同的，就加入结果。</p>
+<p>去重的话，在于索引变动之后，后一个的值和前一个相同，就进入下一个索引。</p>
+<p>此外，我在解法里面看到一个快很多，但是我不知道咋回事，贴在解法2。</p>
+<p>主要是看都看不懂。。。</p>
+<h1 id="解法1"><a href="#解法1" class="headerlink" title="解法1"></a>解法1</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def threeSum(self, nums: List[int]) -&gt; List[List[int]]:</span><br><span class="line">        nums.sort()</span><br><span class="line">        L, res = len(nums), []</span><br><span class="line">        for i in range(L-2):</span><br><span class="line">            if i &gt; 0 and nums[i] == nums[i-1]:</span><br><span class="line">            #去重复</span><br><span class="line">                continue</span><br><span class="line">            target = -1 * nums[i]</span><br><span class="line">            j,k = i + 1, L - 1</span><br><span class="line">            while j&lt;k:</span><br><span class="line">            #双指针法</span><br><span class="line">                if nums[j]+nums[k] == target:</span><br><span class="line">                    res.append([nums[i], nums[j], nums[k]])</span><br><span class="line">                    j = j + 1</span><br><span class="line">                    while j&lt;k and nums[j] == nums[j-1]:</span><br><span class="line">                    #去重复</span><br><span class="line">                        j = j + 1</span><br><span class="line">                elif nums[j] + nums[k] &lt; target:</span><br><span class="line">                    j = j + 1</span><br><span class="line">                else:</span><br><span class="line">                    k = k - 1</span><br><span class="line">        return res</span><br></pre></td></tr></table></figure>
+<h1 id="解法2"><a href="#解法2" class="headerlink" title="解法2"></a>解法2</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def threeSum(self, nums: List[int]) -&gt; List[List[int]]:</span><br><span class="line">        ans = []</span><br><span class="line">        counts = &#123;&#125;</span><br><span class="line">        for i in nums:</span><br><span class="line">            counts[i] = counts.get(i, 0) + 1</span><br><span class="line">        nums = sorted(counts)</span><br><span class="line">        for i, num in enumerate(nums):</span><br><span class="line">            if counts[num] &gt; 1:</span><br><span class="line">                if num == 0:</span><br><span class="line">                    if counts[num] &gt; 2:</span><br><span class="line">                        ans.append([0, 0, 0])</span><br><span class="line">                else:</span><br><span class="line">                    if -num*2 in counts:</span><br><span class="line">                        ans.append([num, num, -2*num])</span><br><span class="line">            if num &lt; 0:</span><br><span class="line">                twosum = -num</span><br><span class="line">                left = bisect.bisect_left(nums, (twosum-nums[-1]), i+1)</span><br><span class="line">                for i in nums[left:bisect.bisect_right(nums, (twosum//2), left)]:</span><br><span class="line">                    j = twosum-i</span><br><span class="line">                    if j in counts and j != i:</span><br><span class="line">                        ans.append([num, i, j])</span><br><span class="line">        return ans</span><br></pre></td></tr></table></figure>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>一开始想错了方向，想着是用hash来做，后来发现是不一样的类型。</p>
+]]></content>
+      <tags>
+        <tag>leetcode</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>礼为上</title>
     <url>/2019/12/21/%E7%A4%BC%E4%B8%BA%E4%B8%8A/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<p>资治通鉴三家分晋，一点小感悟。</p>
+<a id="more"></a>
+<h1 id="三家分晋"><a href="#三家分晋" class="headerlink" title="三家分晋"></a>三家分晋</h1><p>简单来说，就是公元前403年，威烈王让晋国的大夫魏斯、赵籍和韩虔成为诸侯。</p>
+<p>那时候诸侯不是随便当的，是由周天子分封得到的。</p>
+<p>这三家成为诸侯，就意味着周天子确定的那套制度不适用了，意味着社会制度的规模性失灵。</p>
+<h1 id="礼为上"><a href="#礼为上" class="headerlink" title="礼为上"></a>礼为上</h1><p>所谓的礼，在我的理解看来，就是社会的一套制度、一套规则，每个人根据礼各安其份，做自己应该做的事情。</p>
+<p>在现在看来，是有问题的，为什么自己不能成为最高层人物呢？</p>
+<p>但其实是有没有问题，阶层固化的现实就摆在眼前。</p>
+<p>我们可能没有像古代的礼说的那么明白，但是门当户对的观念、资本力量，其实就是暗示着我们，我们之间是有区别的。</p>
+<p>现在的好处就是，通过高考、公务员考试，我们有一个阶级提升的途径，我们可以成为中产阶级。</p>
+<p>古代为什么那么强调礼，是为了通过礼来进行管理，通过礼来安排一下。</p>
+<p>我们现在为什么不用，因为我们现在有上升的途径，我们通过奋斗，用自己的双手创造美好生活。</p>
+<p>礼为上的观念，在现在没有那么绝对，没有说你不配啥的，我就是排在你前面；我们现在说的是平等，我们可以追求美好生活。</p>
+<p>但礼为上的观点，是可以一直有的。它在现今社会的表现就是，得通过规则，得到自己想要的。</p>
+<p>无外乎很多人想从政，想改变自己的命运。但是又有很多人在半路上搁浅，在从政这条路上前仆后继。</p>
+<p>我们得尊重规则，在规则的旗帜下前进。</p>
+<p>最简单的观点就是统战，把所有人团结在一起，为自己的共同利益和理想做追求。</p>
+<h1 id="气魄"><a href="#气魄" class="headerlink" title="气魄"></a>气魄</h1><p>司马光说天子分晋是对礼的主动破坏。</p>
+<p>但是我想的是君弱而臣强，如果不这样的话，岂不是自然而然有生命危险。</p>
+<p>在维系制度和自己生命之间，自然而然地选择了自己的生命。</p>
+<p>一切都在于利益优先。</p>
+<p>要为了维护礼的制度，牺牲自己，真的需要一点决心、一点气魄。</p>
+<p>我想我现在应该还没有这样的品质，能把生死置之度外，我还没找到能为自己奋斗的信仰。</p>
+<h1 id="道义"><a href="#道义" class="headerlink" title="道义"></a>道义</h1><p>在做决策的时候，要重视诚信、道义，这是现在很普遍的观念。</p>
+<p>我一直想不明白，在做生意的时候，看到诚信体现的时候，有些人纳头就拜，一定要把生意给你做，即使你做的贵一点。</p>
+<p>但是这又是经常传颂的一些事件。</p>
+<p>说到做到，是一种难能可贵的品质。他可以改变人的印象。</p>
+<p>现在还不太明白，但是我想说到做到，应该是我要有的品质。凡是答应的，就一定要做完。</p>
+]]></content>
       <tags>
         <tag>阅读记录</tag>
         <tag>资治通鉴</tag>
