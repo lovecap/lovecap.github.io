@@ -1,6 +1,499 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>leetcode第29题</title>
+    <url>/2019/12/26/leetcode%E7%AC%AC29%E9%A2%98/</url>
+    <content><![CDATA[<h1 id="leetcode第29题"><a href="#leetcode第29题" class="headerlink" title="leetcode第29题"></a>leetcode第29题</h1> <a id="more"></a> 
+<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>给定一个排序数组，你需要在原地删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。</p>
+<p>不要使用额外的数组空间，你必须在原地修改输入数组并在使用 O(1) 额外空间的条件下完成。</p>
+<h1 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">给定数组 nums = [1,1,2], </span><br><span class="line"></span><br><span class="line">函数应该返回新的长度 2, 并且原数组 nums 的前两个元素被修改为 1, 2。 </span><br><span class="line"></span><br><span class="line">你不需要考虑数组中超出新长度后面的元素。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">给定 nums = [0,0,1,1,1,2,2,3,3,4],</span><br><span class="line"></span><br><span class="line">函数应该返回新的长度 5, 并且原数组 nums 的前五个元素被修改为 0, 1, 2, 3, 4。</span><br><span class="line"></span><br><span class="line">你不需要考虑数组中超出新长度后面的元素。</span><br></pre></td></tr></table></figure>
+<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>解法1很简单 ，暴力破解，啥都别说，超时了。。。。。</p>
+<p>解法2用移位代替乘法，每次不是减一个被除数，而是被除数的若干次，大大加快了速度。</p>
+<h1 id="解法1"><a href="#解法1" class="headerlink" title="解法1"></a>解法1</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def divide(self, dividend: int, divisor: int) -&gt; int:</span><br><span class="line">        minusLabel=False</span><br><span class="line">        if (dividend &gt;0 and divisor&lt;0) or (dividend&lt;0 and divisor&gt;0):</span><br><span class="line">            minusLabel =True</span><br><span class="line">        dividend=abs(dividend)</span><br><span class="line">        divisor=abs(divisor)</span><br><span class="line">        count=0</span><br><span class="line">        while dividend&gt;=divisor :</span><br><span class="line">            dividend-=divisor</span><br><span class="line">            count+=1</span><br><span class="line">        </span><br><span class="line">        if minusLabel:</span><br><span class="line">            count*=-1</span><br><span class="line"></span><br><span class="line">        if count&gt;2147483647 or count&lt;-2147483648:</span><br><span class="line">            return 2147283647</span><br><span class="line">        return count</span><br></pre></td></tr></table></figure>
+<h1 id="解法2"><a href="#解法2" class="headerlink" title="解法2"></a>解法2</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def divide(self, dividend: int, divisor: int) -&gt; int:</span><br><span class="line">        minusLabel=False</span><br><span class="line">        if (dividend &gt;0 and divisor&lt;0) or (dividend&lt;0 and divisor&gt;0):</span><br><span class="line">            minusLabel =True</span><br><span class="line">        dividend=abs(dividend)</span><br><span class="line">        divisor=abs(divisor)</span><br><span class="line"></span><br><span class="line">        res = 0</span><br><span class="line">        while(dividend &gt;= divisor):</span><br><span class="line">            multidivisor, multi = divisor, 1</span><br><span class="line">            while(dividend &gt;= multidivisor):</span><br><span class="line">                </span><br><span class="line">                res += multi</span><br><span class="line">                dividend -= multidivisor</span><br><span class="line">                multi = multi &lt;&lt; 1</span><br><span class="line">                multidivisor = multidivisor &lt;&lt;1</span><br><span class="line">        </span><br><span class="line">        if minusLabel:</span><br><span class="line">            res*=-1</span><br><span class="line"></span><br><span class="line">        if res&gt;2147483647 or res&lt;-2147483648:</span><br><span class="line">            return 2147483647</span><br><span class="line">        return res</span><br></pre></td></tr></table></figure>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>这种题的问题在于我无法用简单的解决问题。</p>
+]]></content>
+      <tags>
+        <tag>leetcode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>leetcode第28题</title>
+    <url>/2019/12/26/leetcode%E7%AC%AC28%E9%A2%98/</url>
+    <content><![CDATA[<h1 id="leetcode第28题"><a href="#leetcode第28题" class="headerlink" title="leetcode第28题"></a>leetcode第28题</h1> <a id="more"></a> 
+<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>给定一个 haystack 字符串和一个 needle 字符串，在 haystack 字符串中找出 needle 字符串出现的第一个位置 (从0开始)。如果不存在，则返回  -1。</p>
+<h1 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">示例1</span><br><span class="line">输入: haystack = &quot;hello&quot;, needle = &quot;ll&quot;</span><br><span class="line">输出: 2</span><br><span class="line"></span><br><span class="line">示例2</span><br><span class="line">输入: haystack = &quot;aaaaa&quot;, needle = &quot;bba&quot;</span><br><span class="line">输出: -1</span><br></pre></td></tr></table></figure>
+<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>我的思路就是当两个字符第一个字符相等的时候进行比较。</p>
+<p>然后倒着进行比较，如果有不相等，就认为这次比较无效。</p>
+<p>如果比较完了，就直接输出第一个字符的当前位置。</p>
+<p>贴在解法里了。</p>
+<h1 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def strStr(self, haystack: str, needle: str) -&gt; int:</span><br><span class="line">        num=len(needle)</span><br><span class="line">        num2=len(haystack)</span><br><span class="line">        </span><br><span class="line">        if needle==&apos;&apos;:</span><br><span class="line">            return 0</span><br><span class="line">        </span><br><span class="line">        for i in range(num2):</span><br><span class="line">            flag=False</span><br><span class="line">            if haystack[i]==needle[0]:</span><br><span class="line">                count1=i+num-1</span><br><span class="line">                count3=len(needle)-1</span><br><span class="line">                while num+i&lt;=num2:</span><br><span class="line">                    if count3==0:</span><br><span class="line">                        flag=True</span><br><span class="line">                        break</span><br><span class="line">                    if haystack[count1]!=needle[count3]:</span><br><span class="line">                        print(i,count1,count3,haystack[count1],needle[count3])</span><br><span class="line">                        break</span><br><span class="line">                    count1-=1</span><br><span class="line">                    count3-=1</span><br><span class="line"></span><br><span class="line">            if flag:</span><br><span class="line">                return i</span><br><span class="line">        return -1</span><br></pre></td></tr></table></figure>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>更快速度用的都是Index和find，说明这两实现的方式肯定比我高端，有计划要去学习一下。</p>
+]]></content>
+      <tags>
+        <tag>leetcode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>leetcode第27题</title>
+    <url>/2019/12/26/leetcode%E7%AC%AC27%E9%A2%98/</url>
+    <content><![CDATA[<h1 id="leetcode第27题"><a href="#leetcode第27题" class="headerlink" title="leetcode第27题"></a>leetcode第27题</h1> <a id="more"></a> 
+<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>给定一个数组 nums 和一个值 val，你需要原地移除所有数值等于 val 的元素，返回移除后数组的新长度。</p>
+<p>不要使用额外的数组空间，你必须在原地修改输入数组并在使用 O(1) 额外空间的条件下完成。</p>
+<p>元素的顺序可以改变。你不需要考虑数组中超出新长度后面的元素。</p>
+<h1 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">示例1</span><br><span class="line">给定 nums = [3,2,2,3], val = 3,</span><br><span class="line"></span><br><span class="line">函数应该返回新的长度 2, 并且 nums 中的前两个元素均为 2。</span><br><span class="line"></span><br><span class="line">你不需要考虑数组中超出新长度后面的元素。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">示例2</span><br><span class="line">给定 nums = [0,1,2,2,3,0,4,2], val = 2,</span><br><span class="line"></span><br><span class="line">函数应该返回新的长度 5, 并且 nums 中的前五个元素为 0, 1, 3, 0, 4。</span><br><span class="line"></span><br><span class="line">注意这五个元素可为任意顺序。</span><br><span class="line"></span><br><span class="line">你不需要考虑数组中超出新长度后面的元素。</span><br></pre></td></tr></table></figure>
+<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>这题和上题做法是一样的，就是比较替换。</p>
+<h1 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def removeElement(self, nums: List[int], val: int) -&gt; int:</span><br><span class="line">        count=0</span><br><span class="line">        end=len(nums)</span><br><span class="line">        </span><br><span class="line">        v,now,count=0,0,0</span><br><span class="line">        while v&lt;end:</span><br><span class="line">            if nums[v]!=val:</span><br><span class="line">                nums[count],now,count=nums[v],v,count+1</span><br><span class="line">            v+=1</span><br><span class="line">        return count</span><br></pre></td></tr></table></figure>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>学习一下上题，这题就可以巩固加深。</p>
+]]></content>
+      <tags>
+        <tag>leetcode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>目标管理之2019-12-26</title>
+    <url>/2019/12/26/%E7%9B%AE%E6%A0%87%E7%AE%A1%E7%90%86%E4%B9%8B2019-12-26/</url>
+    <content><![CDATA[<p>早起失败的第一天，依然这个点开始干活。。</p>
+<p>考虑适当的缩减代办，把目标聚焦在论文上。</p>
+<p>八段锦真的有用，练完感觉身体舒服一点。</p>
+<a id="more"></a>
+<h1 id="每周任务"><a href="#每周任务" class="headerlink" title="每周任务"></a>每周任务</h1><table>
+<thead>
+<tr>
+<th style="text-align:center">任务</th>
+<th style="text-align:center">截止日期</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">资治通鉴七篇小短文</td>
+<td style="text-align:center">周五晚上</td>
+</tr>
+<tr>
+<td style="text-align:center">leetcode20道题</td>
+<td style="text-align:center">周五晚上</td>
+</tr>
+<tr>
+<td style="text-align:center">论文初稿完成</td>
+<td style="text-align:center">周三晚上</td>
+</tr>
+</tbody>
+</table>
+<h1 id="每日待办"><a href="#每日待办" class="headerlink" title="每日待办"></a>每日待办</h1><table>
+<thead>
+<tr>
+<th style="text-align:center">优先级</th>
+<th style="text-align:center">任务</th>
+<th style="text-align:center">完成打卡</th>
+<th style="text-align:center">评分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">重要且紧急</td>
+<td style="text-align:center">阅读，写作</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">重要且紧急</td>
+<td style="text-align:center">写第二章和第三章</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">重要但不紧急</td>
+<td style="text-align:center">每天冥想三次</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">重要但不紧急</td>
+<td style="text-align:center">刷leetcode（新题三道、复习一道）</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">重要但不紧急</td>
+<td style="text-align:center">练习八段锦</td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+]]></content>
+      <tags>
+        <tag>每日目标管理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>随笔之2019-12-25</title>
+    <url>/2019/12/25/%E9%9A%8F%E7%AC%94%E4%B9%8B2019-12-25/</url>
+    <content><![CDATA[<p>就感觉自己很多事情可以做，但是就是不用心去做。</p>
+<p>老是用各种各样的借口来解释拖延的行动。</p>
+<p>今天算荒废，又不算荒废。</p>
+<p>不过熬夜影响真的大，今天又过去了，写完这个练习一下八段锦，就可以回寝室了。</p>
+<a id="more"></a>
+<h1 id="突然很想追冯夏凝"><a href="#突然很想追冯夏凝" class="headerlink" title="突然很想追冯夏凝"></a>突然很想追冯夏凝</h1><p>感觉自己最近欲念缠身，很想追冯夏凝，也不知道为什么。</p>
+<p>其实只是一次性的幻想，在她身上，能感受到什么呢？</p>
+<p>就觉得她是一个知书达理形的姑娘，她的为人处世给人的感觉非常舒服。</p>
+<p>不过，很刻意，应该是没有结果的。</p>
+<h1 id="论文"><a href="#论文" class="headerlink" title="论文"></a>论文</h1><p>我是真的不适合写论文，感觉字多了，就和憋尿一样，什么感觉都没有。</p>
+<p>只能一点一滴往外挤。</p>
+<p>只能说现在还有时间，可以多修改一下，多多润色。</p>
+<p>不管怎么说，得积极推进。</p>
+<h1 id="培养一个好习惯"><a href="#培养一个好习惯" class="headerlink" title="培养一个好习惯"></a>培养一个好习惯</h1><p>我需要一个理想信念，自律的习惯不是靠看直播看出来，是靠一点一滴积累起来的。</p>
+<p>得想办法让自己有个正反馈，让自己能自觉投入到知识点里面。</p>
+<p>很多东西都可以慢一点，只要我自己珍惜时间。</p>
+<p>当然我感觉早起也很有比较，七点钟起来，一天就会比别人多好多好多时间。</p>
+<h1 id="早点睡觉"><a href="#早点睡觉" class="headerlink" title="早点睡觉"></a>早点睡觉</h1><p>11点左右睡觉，现在看来是必须，不管再怎么吵，不管再怎么样，也都要闭上眼睛。</p>
+<p>希望有一天能数着自己的呼吸入眠，不去动奇奇怪怪的念头。</p>
+]]></content>
+      <tags>
+        <tag>myself</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>leetcode第26题</title>
+    <url>/2019/12/25/leetcode%E7%AC%AC26%E9%A2%98/</url>
+    <content><![CDATA[<h1 id="leetcode第26题"><a href="#leetcode第26题" class="headerlink" title="leetcode第26题"></a>leetcode第26题</h1> <a id="more"></a> 
+<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>给定一个排序数组，你需要在原地删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。</p>
+<p>不要使用额外的数组空间，你必须在原地修改输入数组并在使用 O(1) 额外空间的条件下完成。</p>
+<h1 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">给定数组 nums = [1,1,2], </span><br><span class="line"></span><br><span class="line">函数应该返回新的长度 2, 并且原数组 nums 的前两个元素被修改为 1, 2。 </span><br><span class="line"></span><br><span class="line">你不需要考虑数组中超出新长度后面的元素。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">给定 nums = [0,0,1,1,1,2,2,3,3,4],</span><br><span class="line"></span><br><span class="line">函数应该返回新的长度 5, 并且原数组 nums 的前五个元素被修改为 0, 1, 2, 3, 4。</span><br><span class="line"></span><br><span class="line">你不需要考虑数组中超出新长度后面的元素。</span><br></pre></td></tr></table></figure>
+<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>解法1很简单 ，一直循环、干就完事了。</p>
+<p>但是好像不符合不适用额外空间，怪不得时间这么慢。</p>
+<p>贴在解法1。</p>
+<p>解法2的做法就是不断的比较，当前位置和前面位置比较，如果相同就跳过；如果不相同就更新信息。</p>
+<p>贴在解法2。</p>
+<h1 id="解法1"><a href="#解法1" class="headerlink" title="解法1"></a>解法1</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def removeDuplicates(self, nums: List[int]) -&gt; int:</span><br><span class="line">        d=[]</span><br><span class="line">        count=0</span><br><span class="line">        for i in nums:</span><br><span class="line">            if i not in d:</span><br><span class="line">                nums[count]=i</span><br><span class="line">                d.append(i)</span><br><span class="line">                count+=1</span><br><span class="line">        return count</span><br></pre></td></tr></table></figure>
+<h1 id="解法2"><a href="#解法2" class="headerlink" title="解法2"></a>解法2</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def removeDuplicates(self, nums: List[int]) -&gt; int:</span><br><span class="line">        end = len(nums)</span><br><span class="line">        if end &lt; 2:</span><br><span class="line">            return 0 if end&lt;1 else 1</span><br><span class="line">        v, now, num = 1, 0, 1</span><br><span class="line">        while v &lt; end:</span><br><span class="line">            if nums[v] != nums[now]:</span><br><span class="line">                nums[num], now, num = nums[v], v, num+1</span><br><span class="line">            v += 1</span><br><span class="line">        return num</span><br></pre></td></tr></table></figure>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>这种题的问题在于我无法用简单的解决问题。</p>
+]]></content>
+      <tags>
+        <tag>leetcode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>leetcode第25题</title>
+    <url>/2019/12/25/leetcode%E7%AC%AC25%E9%A2%98/</url>
+    <content><![CDATA[<h1 id="leetcode第25题"><a href="#leetcode第25题" class="headerlink" title="leetcode第25题"></a>leetcode第25题</h1> <a id="more"></a> 
+<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>给你一个链表，每 k 个节点一组进行翻转，请你返回翻转后的链表。</p>
+<p>k 是一个正整数，它的值小于或等于链表的长度。</p>
+<p>如果节点总数不是 k 的整数倍，那么请将最后剩余的节点保持原有顺序。</p>
+<p><strong>说明 :</strong></p>
+<ul>
+<li>你的算法只能使用常数的额外空间。</li>
+<li><strong>你不能只是单纯的改变节点内部的值</strong>，而是需要实际的进行节点交换。</li>
+</ul>
+<h1 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">给定这个链表：1-&gt;2-&gt;3-&gt;4-&gt;5</span><br><span class="line"></span><br><span class="line">当 k = 2 时，应当返回: 2-&gt;1-&gt;4-&gt;3-&gt;5</span><br><span class="line"></span><br><span class="line">当 k = 3 时，应当返回: 3-&gt;2-&gt;1-&gt;4-&gt;5</span><br></pre></td></tr></table></figure>
+<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>解法1的思路和解法2一样，说是能用递归，没发现递归在哪能用的。。。</p>
+<p>解法2的做法就是先找出一共多少个链表，然后对按照每n个一组，进行翻转。</p>
+<p>贴在解法2。</p>
+<h1 id="解法1"><a href="#解法1" class="headerlink" title="解法1"></a>解法1</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def reverseKGroup(self, head: ListNode, k: int) -&gt; ListNode:</span><br><span class="line">        if not head:</span><br><span class="line">            return None</span><br><span class="line">        dummy = ListNode(0)</span><br><span class="line">        dummy.next = head</span><br><span class="line"></span><br><span class="line">        pre = dummy</span><br><span class="line"></span><br><span class="line">        while pre:</span><br><span class="line">            pre = self.reverse(pre, k)</span><br><span class="line">        </span><br><span class="line">        return dummy.next</span><br><span class="line"></span><br><span class="line">    def reverse(self, head, k):</span><br><span class="line">        cur = head</span><br><span class="line"></span><br><span class="line">        for _ in range(k):</span><br><span class="line">            cur = cur.next</span><br><span class="line">            if not cur:</span><br><span class="line">                return None</span><br><span class="line">        nk = cur</span><br><span class="line">        nkplus = cur.next</span><br><span class="line"></span><br><span class="line">        cur = n1 = head.next</span><br><span class="line">        pre = head</span><br><span class="line"></span><br><span class="line">        while cur != nkplus:</span><br><span class="line">            temp = cur.next</span><br><span class="line">            cur.next = pre</span><br><span class="line">            pre = cur</span><br><span class="line">            cur = temp</span><br><span class="line">        </span><br><span class="line">        n1.next = nkplus</span><br><span class="line">        head.next = nk</span><br><span class="line"></span><br><span class="line">        return n1</span><br></pre></td></tr></table></figure>
+<h1 id="解法2"><a href="#解法2" class="headerlink" title="解法2"></a>解法2</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Definition for singly-linked list.</span><br><span class="line"># class ListNode:</span><br><span class="line">#     def __init__(self, x):</span><br><span class="line">#         self.val = x</span><br><span class="line">#         self.next = None</span><br><span class="line"></span><br><span class="line">class Solution:</span><br><span class="line">    def reverseKGroup(self, head: ListNode, k: int) -&gt; ListNode:</span><br><span class="line">        rel = ListNode(-1)</span><br><span class="line">        rel.next = head</span><br><span class="line">        pre = rel</span><br><span class="line">        cur = head</span><br><span class="line">        count = 0</span><br><span class="line">        while head!=None:</span><br><span class="line">            count = count+1</span><br><span class="line">            head = head.next</span><br><span class="line">        for i in range(count//k):</span><br><span class="line">            for j in range(1,k):</span><br><span class="line">                temp = cur.next</span><br><span class="line">                cur.next = temp.next</span><br><span class="line">                temp.next = pre.next</span><br><span class="line">                pre.next = temp</span><br><span class="line">            pre = cur</span><br><span class="line">            cur = cur.next</span><br><span class="line">            </span><br><span class="line">        return rel.next</span><br></pre></td></tr></table></figure>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>头晕，没做出来。</p>
+]]></content>
+      <tags>
+        <tag>leetcode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>leetcode第24题</title>
+    <url>/2019/12/25/leetcode%E7%AC%AC24%E9%A2%98/</url>
+    <content><![CDATA[<h1 id="leetcode第24题"><a href="#leetcode第24题" class="headerlink" title="leetcode第24题"></a>leetcode第24题</h1> <a id="more"></a> 
+<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>给定一个链表，两两交换其中相邻的节点，并返回交换后的链表。</p>
+<p><strong>你不能只是单纯的改变节点内部的值</strong>，而是需要实际的进行节点交换。</p>
+<h1 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">给定 1-&gt;2-&gt;3-&gt;4, 你应该返回 2-&gt;1-&gt;4-&gt;3.</span><br></pre></td></tr></table></figure>
+<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>根本没想到能用递归，但是就是这么简单。</p>
+<p>贴在解法1。</p>
+<p>非递归做法把我整晕了，不应该啊。</p>
+<p>贴在解法2。</p>
+<h1 id="解法1"><a href="#解法1" class="headerlink" title="解法1"></a>解法1</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Definition for singly-linked list.</span><br><span class="line"># class ListNode:</span><br><span class="line">#     def __init__(self, x):</span><br><span class="line">#         self.val = x</span><br><span class="line">#         self.next = None</span><br><span class="line"></span><br><span class="line">class Solution:</span><br><span class="line">    def swapPairs(self, head: ListNode) -&gt; ListNode:</span><br><span class="line"></span><br><span class="line">        if head == None or head.next == None:</span><br><span class="line">            return head</span><br><span class="line">        </span><br><span class="line">        next = head.next</span><br><span class="line">        head.next = self.swapPairs(next.next)</span><br><span class="line">        next.next = head</span><br><span class="line">        return next</span><br></pre></td></tr></table></figure>
+<h1 id="解法2"><a href="#解法2" class="headerlink" title="解法2"></a>解法2</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Definition for singly-linked list.</span><br><span class="line"># class ListNode:</span><br><span class="line">#     def __init__(self, x):</span><br><span class="line">#         self.val = x</span><br><span class="line">#         self.next = None</span><br><span class="line"></span><br><span class="line">class Solution:</span><br><span class="line">    def swapPairs(self, head: ListNode) -&gt; ListNode:</span><br><span class="line">        pre=ListNode(0)</span><br><span class="line">        pre.next=head</span><br><span class="line">        tmp=pre</span><br><span class="line">        while tmp.next!=None and tmp.next.next!=None:</span><br><span class="line">            start=tmp.next</span><br><span class="line">            end=tmp.next.next</span><br><span class="line">            tmp.next=end</span><br><span class="line">            start.next=end.next</span><br><span class="line">            end.next=start</span><br><span class="line">            tmp=start</span><br><span class="line"></span><br><span class="line">        return pre.next</span><br></pre></td></tr></table></figure>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>链表难一点就不行了，头就晕了，建议加大训练。</p>
+]]></content>
+      <tags>
+        <tag>leetcode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>目标管理之2019-12-25</title>
+    <url>/2019/12/25/%E7%9B%AE%E6%A0%87%E7%AE%A1%E7%90%86%E4%B9%8B2019-12-25/</url>
+    <content><![CDATA[<p>今天还是得加油干啊！</p>
+<p>发现今天和昨天同一个点开始搞事情，真的是。</p>
+<p>凌晨两点睡觉，早起计划就一下子破灭了。</p>
+<p>白天上班以课题为重，挤时间做有的没的。</p>
+<p>不能太安逸，虽然我现在到，也已经算迟到了。</p>
+<a id="more"></a>
+<h1 id="每周任务"><a href="#每周任务" class="headerlink" title="每周任务"></a>每周任务</h1><table>
+<thead>
+<tr>
+<th style="text-align:center">任务</th>
+<th style="text-align:center">截止日期</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">资治通鉴七篇小短文</td>
+<td style="text-align:center">周五晚上</td>
+</tr>
+<tr>
+<td style="text-align:center">leetcode20道题</td>
+<td style="text-align:center">周五晚上</td>
+</tr>
+<tr>
+<td style="text-align:center">论文初稿完成</td>
+<td style="text-align:center">周三晚上</td>
+</tr>
+</tbody>
+</table>
+<h1 id="每日待办"><a href="#每日待办" class="headerlink" title="每日待办"></a>每日待办</h1><table>
+<thead>
+<tr>
+<th style="text-align:center">优先级</th>
+<th style="text-align:center">任务</th>
+<th style="text-align:center">完成打卡</th>
+<th style="text-align:center">评分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">重要且紧急</td>
+<td style="text-align:center">阅读，写作</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">重要且紧急</td>
+<td style="text-align:center">写第一章和第二章</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">重要但不紧急</td>
+<td style="text-align:center">每天冥想三次</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">重要但不紧急</td>
+<td style="text-align:center">阅读计算机网络</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">重要但不紧急</td>
+<td style="text-align:center">刷leetcode（新题三道、复习一道）</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center">5</td>
+</tr>
+<tr>
+<td style="text-align:center">重要但不紧急</td>
+<td style="text-align:center">练习八段锦</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">重要但不紧急</td>
+<td style="text-align:center">练字</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">重要但不紧急</td>
+<td style="text-align:center">背诵《道德经》</td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+]]></content>
+      <tags>
+        <tag>每日目标管理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>在德不在险</title>
+    <url>/2019/12/24/%E5%9C%A8%E5%BE%B7%E4%B8%8D%E5%9C%A8%E9%99%A9/</url>
+    <content><![CDATA[<p>堡垒往往最先从内部攻破。</p>
+<p>治理国家的要点在德不在险。</p>
+<p>一个人最应该有的品质就是仁和德。</p>
+<a id="more"></a>
+<h1 id="吴起"><a href="#吴起" class="headerlink" title="吴起"></a>吴起</h1><p>吴起毫无疑问是一个悲情人物。</p>
+<p>一方面他有卓越的军事和内政本领，可以帮助国家强大。</p>
+<p>另一方面，他性格上有缺陷，杀妻以求将；又刚愎自用，不会迂回婉转。</p>
+<p>他在鲁国、魏国、楚国干的都很出色，作为一个将军，他毫无疑问是满分角色。</p>
+<p>但也正是因为干的出色，会不自觉的触动别人的利益，会有各种谗言、猜忌出现。也正是因为他的性格，他也很容易入坑，不自觉的和君主之间出现隔阂。</p>
+<p>然后他就会担心被宰，就会想着连夜跑路，再到下一个地方发光发热。</p>
+<h1 id="我的看法"><a href="#我的看法" class="headerlink" title="我的看法"></a>我的看法</h1><p>我认为吴起是一个很奇怪的人。</p>
+<p>首先他知道怎么样治军、怎么样处理内政，他也懂君主治国在德不在险。</p>
+<p>他在具体做事的时候非常明确，改革变法、行云流水。</p>
+<p>但是他在被人猜忌、质疑的时候，处理的就很有问题了。</p>
+<p>没想着去解决问题，想着是跑路换下家。</p>
+<p>有一次可能是巧合，但是一而再再而三，老是依托于君主的信任希望幸免于难。</p>
+<p>就很有问题。</p>
+<p>吴起适合做天生的君主，因为只有这样，他不再需要靠别人的眼色生活。他在内政和军事上的能力，天然就会把国家发扬光大。</p>
+<p>只能说时也命也，在那个时候，才智超群，但是地位不符合，也是一个问题。</p>
+<h1 id="我的理解"><a href="#我的理解" class="headerlink" title="我的理解"></a>我的理解</h1><p>功高震主，永远是不行的，如何赢得别人的信任，是一个很有技巧的问题。</p>
+<p>内心要培养仁德，行仁义之事，需知一个人能不能办成事，都是在日常积累中得到的。我们说的资源和人脉，也都是一点一滴积累起来的。</p>
+<p>在面对猜忌、小人构陷的时候，如何合理破局，也是一个值得思考的问题。</p>
+]]></content>
+      <tags>
+        <tag>阅读记录</tag>
+        <tag>资治通鉴</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>leetcode第23题</title>
+    <url>/2019/12/24/leetcode%E7%AC%AC23%E9%A2%98/</url>
+    <content><![CDATA[<h1 id="leetcode第23题"><a href="#leetcode第23题" class="headerlink" title="leetcode第23题"></a>leetcode第23题</h1> <a id="more"></a> 
+<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>合并 <em>k</em> 个排序链表，返回合并后的排序链表。请分析和描述算法的复杂度。</p>
+<h1 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入:</span><br><span class="line">[</span><br><span class="line">  1-&gt;4-&gt;5,</span><br><span class="line">  1-&gt;3-&gt;4,</span><br><span class="line">  2-&gt;6</span><br><span class="line">]</span><br><span class="line">输出: 1-&gt;1-&gt;2-&gt;3-&gt;4-&gt;4-&gt;5-&gt;6</span><br></pre></td></tr></table></figure>
+<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>我的思路就是用之前的合并两个列表作为一部分进行。</p>
+<p>将lists里面的两两合并，最后返回就行了。</p>
+<p>做是做出来了，就是时间复杂度太low了。</p>
+<p>贴在解法1。</p>
+<p>看了一下最快运行速度的答案，发现做法完全不一样。</p>
+<p>他是把所有的值都给拿出来，然后直接构造一个链表，比我这merge两个快多了。</p>
+<p>贴在解法2。</p>
+<h1 id="解法1"><a href="#解法1" class="headerlink" title="解法1"></a>解法1</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Definition for singly-linked list.</span><br><span class="line"># class ListNode:</span><br><span class="line">#     def __init__(self, x):</span><br><span class="line">#         self.val = x</span><br><span class="line">#         self.next = None</span><br><span class="line"></span><br><span class="line">class Solution:</span><br><span class="line">    def mergeKLists(self, lists: List[ListNode]) -&gt; ListNode:</span><br><span class="line">        if len(lists)==0:</span><br><span class="line">            return None</span><br><span class="line">        if len(lists)==1:</span><br><span class="line">            return lists[0]</span><br><span class="line">        </span><br><span class="line">        n=len(lists)</span><br><span class="line">        def mergeTwoLists( l1, l2) :</span><br><span class="line">            head=ListNode(0)</span><br><span class="line">            r=head</span><br><span class="line">            while l1 or l2:</span><br><span class="line">                if l1 and l2:</span><br><span class="line">                    if l1.val&lt;=l2.val:</span><br><span class="line">                        r.next=l1</span><br><span class="line">                        r=r.next</span><br><span class="line">                        l1=l1.next</span><br><span class="line">                    else:</span><br><span class="line">                        r.next=l2</span><br><span class="line">                        r=r.next</span><br><span class="line">                        l2=l2.next</span><br><span class="line">                if l1 is None:</span><br><span class="line">                    r.next=l2</span><br><span class="line">                    break</span><br><span class="line">                if l2 is None:</span><br><span class="line">                    r.next=l1</span><br><span class="line">                    break</span><br><span class="line">            return head.next</span><br><span class="line">        if len(lists)==2:</span><br><span class="line">            return mergeTwoLists(lists[0],lists[1])</span><br><span class="line">            </span><br><span class="line">        tmp=lists[0]</span><br><span class="line">        for i in range(1,n):</span><br><span class="line">            tmp=mergeTwoLists(tmp,lists[i])</span><br><span class="line">        return tmp</span><br></pre></td></tr></table></figure>
+<h1 id="解法2"><a href="#解法2" class="headerlink" title="解法2"></a>解法2</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Definition for singly-linked list.</span><br><span class="line"># class ListNode:</span><br><span class="line">#     def __init__(self, x):</span><br><span class="line">#         self.val = x</span><br><span class="line">#         self.next = None</span><br><span class="line"></span><br><span class="line">class Solution:</span><br><span class="line">    def mergeKLists(self, lists: List[ListNode]) -&gt; ListNode:</span><br><span class="line">        total_list = []</span><br><span class="line">        for nodes in lists:</span><br><span class="line">            while nodes:</span><br><span class="line">                total_list.append(nodes.val)</span><br><span class="line">                nodes = nodes.next</span><br><span class="line">        total_list.sort()</span><br><span class="line">        head = ListNode(-1)</span><br><span class="line">        tem_node = head</span><br><span class="line">        for each in total_list:</span><br><span class="line">            each_node = ListNode(each)</span><br><span class="line">            tem_node.next = each_node</span><br><span class="line">            tem_node = tem_node.next</span><br><span class="line">        return head.next</span><br></pre></td></tr></table></figure>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>递归的知识还不是非常熟练，得加强掌握。</p>
+]]></content>
+      <tags>
+        <tag>leetcode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>leetcode第22题</title>
+    <url>/2019/12/24/leetcode%E7%AC%AC22%E9%A2%98/</url>
+    <content><![CDATA[<h1 id="leetcode第22题"><a href="#leetcode第22题" class="headerlink" title="leetcode第22题"></a>leetcode第22题</h1> <a id="more"></a> 
+<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>给出 <em>n</em> 代表生成括号的对数，请你写出一个函数，使其能够生成所有可能的并且<strong>有效的</strong>括号组合。</p>
+<h1 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">例如，给出 n = 3，生成结果为：</span><br><span class="line">[</span><br><span class="line">  &quot;((()))&quot;,</span><br><span class="line">  &quot;(()())&quot;,</span><br><span class="line">  &quot;(())()&quot;,</span><br><span class="line">  &quot;()(())&quot;,</span><br><span class="line">  &quot;()()()&quot;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>我感觉到要用递归做，但是我不知道怎么用递归。</p>
+<p>看了答案，觉得是非常巧妙。</p>
+<p>边界条件在于，数量达到了最大值2*n。</p>
+<p>递归条件为：左括号小于n，右括号小于左括号。</p>
+<h1 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def generateParenthesis(self, n: int) -&gt; List[str]:</span><br><span class="line">        result=[]</span><br><span class="line">        def trackback(S = &quot;&quot;, left = 0, right = 0):</span><br><span class="line">                if len(S) == 2 * n:     #若当前字符串的长度等于2n则字符串存入列表中</span><br><span class="line">                    result.append(S)</span><br><span class="line">                if left &lt; n:</span><br><span class="line">                    trackback(S + &apos;(&apos;, left + 1, right)</span><br><span class="line">                if right &lt; left:</span><br><span class="line">                    trackback(S + &apos;)&apos;, left, right + 1)</span><br><span class="line">                </span><br><span class="line">        trackback()</span><br><span class="line">        return result</span><br></pre></td></tr></table></figure>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>递归的知识还不是非常熟练，得加强掌握。</p>
+]]></content>
+      <tags>
+        <tag>leetcode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>leetcode第21题</title>
+    <url>/2019/12/24/leetcode%E7%AC%AC21%E9%A2%98/</url>
+    <content><![CDATA[<h1 id="leetcode第21题"><a href="#leetcode第21题" class="headerlink" title="leetcode第21题"></a>leetcode第21题</h1> <a id="more"></a> 
+<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>将两个有序链表合并为一个新的有序链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。 </p>
+<h1 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入：1-&gt;2-&gt;4, 1-&gt;3-&gt;4</span><br><span class="line">输出：1-&gt;1-&gt;2-&gt;3-&gt;4-&gt;4</span><br></pre></td></tr></table></figure>
+<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>解题分成三部分走。</p>
+<p>首先创建头节点和指针。</p>
+<p>其次对两个链表进行循环判断。</p>
+<p>判断条件为：两个链表非空时比较值大小；有一个链表空了就直接把另外一个链表全部挂下来。</p>
+<p>最后返回头节点的后面部分。</p>
+<h1 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Definition for singly-linked list.</span><br><span class="line"># class ListNode:</span><br><span class="line">#     def __init__(self, x):</span><br><span class="line">#         self.val = x</span><br><span class="line">#         self.next = None</span><br><span class="line"></span><br><span class="line">class Solution:</span><br><span class="line">    def mergeTwoLists(self, l1: ListNode, l2: ListNode) -&gt; ListNode:</span><br><span class="line">        head=ListNode(0)</span><br><span class="line">        r=head</span><br><span class="line">        while l1 or l2:</span><br><span class="line">            if l1 and l2:</span><br><span class="line">                if l1.val&lt;=l2.val:</span><br><span class="line">                    r.next=l1</span><br><span class="line">                    r=r.next</span><br><span class="line">                    l1=l1.next</span><br><span class="line">                else:</span><br><span class="line">                    r.next=l2</span><br><span class="line">                    r=r.next</span><br><span class="line">                    l2=l2.next</span><br><span class="line">            if l1 is None:</span><br><span class="line">                r.next=l2</span><br><span class="line">                break</span><br><span class="line">            if l2 is None:</span><br><span class="line">                r.next=l1</span><br><span class="line">                break</span><br><span class="line">        return head.next</span><br></pre></td></tr></table></figure>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>了解链表基本知识。就可以直接操作了。</p>
+<p>适合拿来增强自信。</p>
+<p>题外话：</p>
+<p>我试着用23题的做法来做这个，发现超时了。。。。</p>
+<p>合并两个和合并n个是不一样的。。。</p>
+]]></content>
+      <tags>
+        <tag>leetcode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>目标管理之2019-12-24</title>
+    <url>/2019/12/24/%E7%9B%AE%E6%A0%87%E7%AE%A1%E7%90%86%E4%B9%8B2019-12-24/</url>
+    <content><![CDATA[<p>今天还是得加油干啊！</p>
+<a id="more"></a>
+<h1 id="每周任务"><a href="#每周任务" class="headerlink" title="每周任务"></a>每周任务</h1><table>
+<thead>
+<tr>
+<th style="text-align:center">任务</th>
+<th style="text-align:center">截止日期</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">资治通鉴七篇小短文</td>
+<td style="text-align:center">周五晚上</td>
+</tr>
+<tr>
+<td style="text-align:center">leetcode20道题</td>
+<td style="text-align:center">周五晚上</td>
+</tr>
+<tr>
+<td style="text-align:center">论文初稿完成</td>
+<td style="text-align:center">周三晚上</td>
+</tr>
+</tbody>
+</table>
+<h1 id="每日待办"><a href="#每日待办" class="headerlink" title="每日待办"></a>每日待办</h1><table>
+<thead>
+<tr>
+<th style="text-align:center">优先级</th>
+<th style="text-align:center">任务</th>
+<th style="text-align:center">完成打卡</th>
+<th style="text-align:center">评分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">重要且紧急</td>
+<td style="text-align:center">阅读，写作</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center">6</td>
+</tr>
+<tr>
+<td style="text-align:center">重要且紧急</td>
+<td style="text-align:center">写第一章和第二章</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">重要但不紧急</td>
+<td style="text-align:center">每天冥想三次</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">重要但不紧急</td>
+<td style="text-align:center">阅读计算机网络</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">重要但不紧急</td>
+<td style="text-align:center">刷leetcode</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center">7</td>
+</tr>
+<tr>
+<td style="text-align:center">重要但不紧急</td>
+<td style="text-align:center">练习八段锦</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center">6</td>
+</tr>
+<tr>
+<td style="text-align:center">重要但不紧急</td>
+<td style="text-align:center">练字</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center">4</td>
+</tr>
+<tr>
+<td style="text-align:center">重要但不紧急</td>
+<td style="text-align:center">背诵《道德经》</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center">5</td>
+</tr>
+</tbody>
+</table>
+]]></content>
+      <tags>
+        <tag>每日目标管理</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>魏文侯身上的闪光点</title>
     <url>/2019/12/23/%E9%AD%8F%E6%96%87%E4%BE%AF%E8%BA%AB%E4%B8%8A%E7%9A%84%E9%97%AA%E5%85%89%E7%82%B9/</url>
     <content><![CDATA[<p>魏文侯的几个小故事。</p>
@@ -1018,10 +1511,7 @@
   <entry>
     <title>目标管理之2019-12-18</title>
     <url>/2019/12/18/%E7%9B%AE%E6%A0%87%E7%AE%A1%E7%90%86%E4%B9%8B2019-12-18/</url>
-    <content><![CDATA[<h1 id="做事之前要定下目标"><a href="#做事之前要定下目标" class="headerlink" title="做事之前要定下目标"></a>做事之前要定下目标</h1><p>荒废了一个星期，又重新开始了。</p>
-<p>老是感觉自己走在开始、放弃、重新开始的路途上。</p>
-<p>不过不管怎么样，习惯是习得的。</p>
-<p>我今天重新开始了，还是一个好的继续。</p>
+    <content><![CDATA[<p>正常BB的一天。</p>
 <a id="more"></a>
 <h1 id="每周任务"><a href="#每周任务" class="headerlink" title="每周任务"></a>每周任务</h1><table>
 <thead>
